@@ -6,7 +6,7 @@ export default function MainHeader() {
   return (
     <>
       <Header>
-        <div>
+        <div style={{ display: "flex", alignItems: "center", gap: 40 }}>
           <h1>Fl</h1>
         </div>
         <NavBar />

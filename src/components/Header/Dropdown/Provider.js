@@ -1,6 +1,6 @@
-import { createContext, useCallback, useEffect, useState } from "react";
+import React, { useState, useCallback, useEffect, createContext } from "react";
 
-const Context = createContext();
+export const Context = createContext();
 
 export function DropdownProvider({ children }) {
   const [options, setOptions] = useState([]);
@@ -12,7 +12,7 @@ export function DropdownProvider({ children }) {
       id,
       optionDimensions,
       optionCenterX,
-      wrappedContent,
+      WrappedContent,
       backgroundHeight,
     }) => {
       setOptions((items) => [
@@ -21,7 +21,7 @@ export function DropdownProvider({ children }) {
           id,
           optionDimensions,
           optionCenterX,
-          wrappedContent,
+          WrappedContent,
           backgroundHeight,
         },
       ]);
@@ -31,26 +31,28 @@ export function DropdownProvider({ children }) {
 
   const updateOptionProps = useCallback(
     (optionId, props) => {
-      setOptions((items) => {
+      setOptions((items) =>
         items.map((item) => {
           if (item.id === optionId) {
             item = { ...item, ...props };
           }
 
           return item;
-        });
-      });
+        })
+      );
     },
     [setOptions]
   );
 
   const getOptionById = useCallback(
-    (id) => option.find((item) => item.id === id),
+    (id) => options.find((item) => item.id === id),
     [options]
   );
 
   const deleteOptionById = useCallback(
-    (id) => setOption((items) => items.filter((item) => item.id !== id)),
+    (id) => {
+      setOptions((items) => items.filter((item) => item.id !== id));
+    },
     [setOptions]
   );
 
