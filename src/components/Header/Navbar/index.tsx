@@ -1,7 +1,5 @@
-import styled from "styled-components";
-
 // Components
-import { Dropdown } from "./Dropdown";
+import DropdownMenu from "./Dropdown";
 import { Nav } from './styles'
 
 export default function Navbar() {
@@ -9,13 +7,13 @@ export default function Navbar() {
     <Nav>
       <ul>
         <li>
-          <Dropdown>Projetos</Dropdown>
+          <DropdownMenu title="Projetos" />
         </li>
         <li>
-          <Dropdown>Sobre</Dropdown>
+          <DropdownMenu title="Sobre" />
         </li>
         <li>
-          <Dropdown>Contato</Dropdown>
+          <DropdownMenu title="Contato" />
         </li>
       </ul>
     </Nav>

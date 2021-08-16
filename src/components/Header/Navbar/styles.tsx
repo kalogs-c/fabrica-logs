@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Nav = styled.nav`
   ul {
@@ -8,7 +8,12 @@ export const Nav = styled.nav`
   @media (min-width: 768px) {
     ul {
       display: flex;
+      width: 100%;
       gap: 80px;
+      li {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 `;
