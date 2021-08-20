@@ -9,9 +9,9 @@ export const Nav = styled.nav`
     ul {
       display: flex;
       width: 100%;
-      gap: 80px;
+      gap: 20px;
       li {
-        width: 100%;
+        width: 100px;
         text-align: center;
       }
     }
