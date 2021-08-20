@@ -1,6 +1,6 @@
-import { Container, List } from "./styles";
 import MenuItem from "./MenuItem";
 import DropdownMenuItem from "./DropdownMenuItem";
+import { Container, List } from "./styles";
 
 function NavBar() {
   return (
@@ -8,9 +8,7 @@ function NavBar() {
       <List>
         <MenuItem goTo="/projects" content="Projetos" />
         <MenuItem goTo="/about" content="Sobre" />
-        <DropdownMenuItem
-          title="Conecte-se"
-        />
+        <DropdownMenuItem title="Conecte-se" />
       </List>
     </Container>
   );
