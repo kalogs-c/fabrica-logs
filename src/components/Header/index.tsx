@@ -1,20 +1,13 @@
-import styled from "styled-components";
-
 import Lottie from "react-lottie";
 import rotatingGear from "./../../LottieFiles/RotatingGear/gear.json";
+import router from "next/router";
 
-// Components
-import Navbar from "./Navbar";
-
-const Header = styled.header`
-  color: ${({ theme }) => theme.colors.primary};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 50px;
-`;
+// components
+import { Header, Wrapper, Title } from "./styles";
+import NavBar from "./NavBar";
 
 export default function MainHeader() {
+  // Lottie config
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -25,11 +18,11 @@ export default function MainHeader() {
   };
   return (
     <Header>
-      <div style={{display: "flex", alignItems: "center"}}>
-        <h1>Fabrica Logs</h1>
+      <Wrapper onClick={() => router.push("/")}>
+        <Title>Fabrica Logs</Title>
         <Lottie options={defaultOptions} height={50} width={50} />
-      </div>
-      <Navbar />
+      </Wrapper>
+      <NavBar />
     </Header>
   );
 }

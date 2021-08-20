@@ -1,23 +1,19 @@
-import styled from "styled-components";
+import { Container, List } from "./styles";
+import MenuItem from "./MenuItem";
+import DropdownMenuItem from "./DropdownMenuItem";
 
-// Components
-import { Dropdown } from "./Dropdown";
-import { Nav } from './styles'
-
-export default function Navbar() {
+function NavBar() {
   return (
-    <Nav>
-      <ul>
-        <li>
-          <Dropdown>Projetos</Dropdown>
-        </li>
-        <li>
-          <Dropdown>Sobre</Dropdown>
-        </li>
-        <li>
-          <Dropdown>Contato</Dropdown>
-        </li>
-      </ul>
-    </Nav>
+    <Container>
+      <List>
+        <MenuItem goTo="/projects" content="Projetos" />
+        <MenuItem goTo="/about" content="Sobre" />
+        <DropdownMenuItem
+          title="Conecte-se"
+        />
+      </List>
+    </Container>
   );
 }
+
+export default NavBar;
