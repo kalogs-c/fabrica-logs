@@ -1,21 +1,19 @@
-// Components
-import DropdownMenu from "./Dropdown";
-import { Nav } from './styles'
+import { Container, List } from "./styles";
+import MenuItem from "./MenuItem";
+import DropdownMenuItem from "./DropdownMenuItem";
 
-export default function Navbar() {
+function NavBar() {
   return (
-    <Nav>
-      <ul>
-        <li>
-          <DropdownMenu title="Projetos" />
-        </li>
-        <li>
-          <DropdownMenu title="Sobre" />
-        </li>
-        <li>
-          <DropdownMenu title="Contato" />
-        </li>
-      </ul>
-    </Nav>
+    <Container>
+      <List>
+        <MenuItem goTo="/projects" content="Projetos" />
+        <MenuItem goTo="/about" content="Sobre" />
+        <DropdownMenuItem
+          title="Conecte-se"
+        />
+      </List>
+    </Container>
   );
 }
+
+export default NavBar;

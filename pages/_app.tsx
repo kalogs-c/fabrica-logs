@@ -6,22 +6,22 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Georama';
+    font-family: "JetBrains Mono", monospace;
     text-decoration: none;
     list-style: none;
     outline: none;
   }
 
   body {
-    background-color: #111;
+    background-color: #fff;
   }
 `;
 
 const theme = {
   colors: {
-    primary: "#DEC51D",
-    darkFont: "#999",
-    darkBackground: "#111111",
+    primary: "#fba754",
+    greyFont: "#999",
+    darkFont: "#111111",
   },
 };
 
@@ -30,10 +30,8 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Georama:wght@300;400;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap"
           rel="stylesheet"
         />
       </Head>
