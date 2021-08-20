@@ -4,22 +4,9 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 0 0 0.5rem;
-  transition: color 0.2s ease-out;
-  cursor: pointer;
-
-  span {
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background: ${({ theme }) => theme.colors.primary};
-      transition: width 0.2s;
-    }
-  }
 
   &:hover {
-    span {
+    .dropdown-title {
       color: ${({ theme }) => theme.colors.primary};
 
       &::after {
@@ -30,16 +17,43 @@ export const Wrapper = styled.div`
 `;
 
 export const Dropdown = styled.div`
+  &::before {
+    border-bottom: 8px solid #ddd;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -8px;
+    width: 0;
+  }
+
   align-items: flex-start;
-  background-color: white;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  opacity: 1;
-  transition: opacity 0.3s ease-out;
-  z-index: 11;
+  margin-top: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  transform: translateX(calc((25% - 8px) * (-1)));
+  position: absolute;
+  z-index: 10;
 `;
 
 export const Item = styled.a`
   color: #3d3d3d;
-  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;

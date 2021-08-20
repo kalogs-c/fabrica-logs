@@ -6,7 +6,7 @@ interface DropdownItemProps {
 
 function DropdownItem({ content }: DropdownItemProps) {
   return (
-    <Container>
+    <Container className="dropdown-title" >
       {content}
     </Container>
   );

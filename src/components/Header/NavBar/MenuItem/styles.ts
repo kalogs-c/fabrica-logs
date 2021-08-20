@@ -12,7 +12,6 @@ export const Item = styled.li`
     height: 2px;
     background: ${({ theme }) => theme.colors.primary};
     transition: width 0.2s;
-
   }
 
   &:hover {
