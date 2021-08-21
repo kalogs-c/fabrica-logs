@@ -12,13 +12,12 @@ export async function getServerSideProps({ locale }) {
   };
 }
 
-export default function Home({ locale }) {
+export default function Home() {
   return (
     <>
       <Head>
         <title>Fabrica Logs</title>
       </Head>
-      <h2>{locale}</h2>
       <MainHeader />
     </>
   );
