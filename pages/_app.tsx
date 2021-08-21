@@ -12,8 +12,13 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
   }
 
+  html {
+    height: 100%;
+  }
+
   body {
     background-color: #fff;
+    height: 100%;
   }
 `;
 

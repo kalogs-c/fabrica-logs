@@ -7,6 +7,6 @@ export const List = styled.ul`
 
   @media (min-width: 800px) {
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
   }
 `;

@@ -5,6 +5,7 @@ import router from "next/router";
 // components
 import { Header, Wrapper, Title } from "./styles";
 import NavBar from "./NavBar";
+import MobileMenu from "./MobileMenu";
 
 export default function MainHeader() {
   // Lottie config
@@ -23,6 +24,9 @@ export default function MainHeader() {
         <Lottie options={defaultOptions} height={50} width={50} />
       </Wrapper>
       <NavBar />
+      <div style={{ position: "absolute", right: 0}}>
+        <MobileMenu />
+      </div>
     </Header>
   );
 }
