@@ -7,9 +7,11 @@
   },
   "dependencies": {
     "framer-motion": "^4.1.17",
+    "i18next": "^20.4.0",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.4",
     "react-is": "^17.0.2",
     "react-lottie": "^1.2.3",
     "styled-components": "^5.2.3"

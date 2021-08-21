@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
+import i18n from './../src/i18n'
 
 const GlobalStyle = createGlobalStyle`
   * {

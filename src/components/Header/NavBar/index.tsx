@@ -6,9 +6,9 @@ function NavBar() {
   return (
     <Container>
       <List>
-        <MenuItem goTo="/projects" content="Projetos" />
-        <MenuItem goTo="/about" content="Sobre" />
-        <DropdownMenuItem title="Conecte-se" />
+        <MenuItem goTo="/projects" content="Projects" />
+        <MenuItem goTo="/about" content="About me" />
+        <DropdownMenuItem title="Connect" />
       </List>
     </Container>
   );
