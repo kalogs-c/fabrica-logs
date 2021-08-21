@@ -27,6 +27,11 @@ export const NavWrapper = styled.nav`
   flex-direction: column;
   align-items: flex-end;
   font-size: 2rem;
+
+  select {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
 `;
 
 export const Item = styled.a`

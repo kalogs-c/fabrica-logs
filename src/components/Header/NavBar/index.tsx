@@ -1,4 +1,5 @@
 import MenuItem from "../MenuCommuns/MenuItem";
+import LanguageSwitcher from "../MenuCommuns/LanguageSwitcher";
 import DropdownMenuItem from "./DropdownMenuItem";
 import { Container, List } from "./styles";
 
@@ -12,6 +13,7 @@ function NavBar() {
         <MenuItem goTo="/projects" content={t("header:Projects")} />
         <MenuItem goTo="/about" content={t("header:About me")} />
         <DropdownMenuItem title={t("header:Connect")} />
+        <LanguageSwitcher />
       </List>
     </Container>
   );
