@@ -24,7 +24,7 @@ function MobileMenu() {
   //Framer motion config
   const sidebarVariants = {
     open: () => ({
-      clipPath: `circle(40vh at 90vw 40px)`,
+      clipPath: `circle(50vh at 90vw 40px)`,
       backgroundColor: "#fff",
     }),
     closed: {
