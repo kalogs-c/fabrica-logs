@@ -10,9 +10,10 @@ import Menu from "./../../../LottieFiles/Menu/menu.json";
 // components
 import { Button, Wrapper, NavWrapper, SocialWrapper } from "./styles";
 import MenuItem from "../MenuCommuns/MenuItem";
+import LanguageSwitcher from "../MenuCommuns/LanguageSwitcher";
+
 // SVGs
 import { GithubSVG, GmailSVG, LinkedInSVG } from "./../MenuCommuns/svgs";
-import LanguageSwitcher from "../MenuCommuns/LanguageSwitcher";
 
 function MobileMenu() {
   const { t } = useTranslation();
