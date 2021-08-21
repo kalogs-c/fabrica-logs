@@ -5,7 +5,7 @@ import { Dropdown, Wrapper, Item } from "./styles";
 import DropdownItem from "./DropdownItem";
 
 // SVGs
-import { GithubSVG, GmailSVG, LinkedInSVG } from "./svgs";
+import { GithubSVG, GmailSVG, LinkedInSVG } from "../../MenuCommuns/svgs";
 import { useRef, useState } from "react";
 
 interface DropdownMenuItemProps {
@@ -25,6 +25,7 @@ function DropdownMenuItem({ title }: DropdownMenuItemProps) {
       <motion.div
         onHoverStart={() => setOpen(true)}
         onHoverEnd={() => setOpen(false)}
+        onTap={() => setOpen(!isOpen)}
       >
         <Wrapper>
           <DropdownItem content={title} />

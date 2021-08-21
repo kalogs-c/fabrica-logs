@@ -1,4 +1,4 @@
-import MenuItem from "./MenuItem";
+import MenuItem from "../MenuCommuns/MenuItem";
 import DropdownMenuItem from "./DropdownMenuItem";
 import { Container, List } from "./styles";
 
