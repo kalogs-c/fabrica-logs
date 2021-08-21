@@ -3,10 +3,11 @@ import Head from "next/head";
 // Components
 import MainHeader from "./../src/components/Header";
 
-export function getStaticProps({ locale }) {
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+export async function getServerSideProps({ locale }) {
   return {
     props: {
-      locale,
+      ...(await serverSideTranslations(locale, ["header"])),
     },
   };
 }

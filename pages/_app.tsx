@@ -1,6 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from "next/head";
-import i18n from './../src/i18n'
+import { appWithTranslation } from "next-i18next";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -31,7 +31,7 @@ const theme = {
   },
 };
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
@@ -47,3 +47,5 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+export default appWithTranslation(App);
