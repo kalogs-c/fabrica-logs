@@ -12,6 +12,7 @@ import { Button, Wrapper, NavWrapper, SocialWrapper } from "./styles";
 import MenuItem from "../MenuCommuns/MenuItem";
 // SVGs
 import { GithubSVG, GmailSVG, LinkedInSVG } from "./../MenuCommuns/svgs";
+import LanguageSwitcher from "../MenuCommuns/LanguageSwitcher";
 
 function MobileMenu() {
   const { t } = useTranslation();
@@ -57,16 +58,25 @@ function MobileMenu() {
             <MenuItem goTo="/projects" content={t("header:Projects")} />
             <MenuItem goTo="/about" content={t("header:About me")} />
             <SocialWrapper>
-              <a href="">
+              <a href="#mail">
                 <GmailSVG />
               </a>
-              <a href="">
+              <a
+                href="https://github.com/carloshcamilo"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <GithubSVG />
               </a>
-              <a href="">
+              <a
+                href="https://linkedin.com/in/carloshcamilo"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <LinkedInSVG />
               </a>
             </SocialWrapper>
+            <LanguageSwitcher />
           </NavWrapper>
         </motion.div>
         <Button
