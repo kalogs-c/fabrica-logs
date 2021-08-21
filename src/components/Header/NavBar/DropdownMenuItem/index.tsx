@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 // components
 import { Dropdown, Wrapper, Item } from "./styles";
@@ -6,7 +7,6 @@ import DropdownItem from "./DropdownItem";
 
 // SVGs
 import { GithubSVG, GmailSVG, LinkedInSVG } from "../../MenuCommuns/svgs";
-import { useRef, useState } from "react";
 
 interface DropdownMenuItemProps {
   title: string;
@@ -16,8 +16,15 @@ function DropdownMenuItem({ title }: DropdownMenuItemProps) {
   const [isOpen, setOpen] = useState(false);
 
   const variants = {
-    open: { opacity: 1 },
-    closed: { opacity: 0 },
+    open: { opacity: 1, height: "100%", display: "flex" },
+    closed: {
+      opacity: 0,
+      height: 0,
+      display: "none",
+      transition: {
+        delay: 0.2,
+      },
+    },
   };
 
   return (

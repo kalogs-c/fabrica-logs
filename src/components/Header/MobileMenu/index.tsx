@@ -1,16 +1,21 @@
 import { motion, useCycle } from "framer-motion";
-import React, { useRef, useState } from "react";
+import { useState } from "react";
+
+// Translation
+import { useTranslation } from "next-i18next";
+
 import Lottie from "react-lottie";
-import MenuItem from "../MenuCommuns/MenuItem";
 import Menu from "./../../../LottieFiles/Menu/menu.json";
 
 // components
 import { Button, Wrapper, NavWrapper, SocialWrapper } from "./styles";
-
+import MenuItem from "../MenuCommuns/MenuItem";
 // SVGs
 import { GithubSVG, GmailSVG, LinkedInSVG } from "./../MenuCommuns/svgs";
 
 function MobileMenu() {
+  const { t } = useTranslation();
+
   // Lottie config
   const defaultOptions = {
     loop: false,
@@ -49,8 +54,8 @@ function MobileMenu() {
       <motion.div animate={isOpen ? "open" : "closed"}>
         <motion.div className="menu-div" variants={sidebarVariants}>
           <NavWrapper>
-            <MenuItem goTo="/projects" content="Projetos" />
-            <MenuItem goTo="/about" content="Sobre" />
+            <MenuItem goTo="/projects" content={t("header:Projects")} />
+            <MenuItem goTo="/about" content={t("header:About me")} />
             <SocialWrapper>
               <a href="">
                 <GmailSVG />

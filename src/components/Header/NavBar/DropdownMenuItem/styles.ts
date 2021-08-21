@@ -38,7 +38,7 @@ export const Dropdown = styled.div`
   flex-direction: column;
   margin-top: 1rem;
   padding: 0 1rem 1rem 1rem;
-  transform: translateX(calc((25% - 8px) * (-1)));
+  transform: translateX(calc(-25% - 8px));
   position: absolute;
   z-index: 10;
 `;
