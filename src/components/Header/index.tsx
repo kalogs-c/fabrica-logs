@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Header, Wrapper, Title } from "./styles";
 import NavBar from "./NavBar";
 import MobileMenu from "./MobileMenu";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export default function MainHeader() {
   // Lottie config

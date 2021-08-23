@@ -1,16 +1,14 @@
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
+import styled from "styled-components";
 
 // Components
 import MainHeader from "./../src/components/Header";
+import WelcomePanel from "./../src/components/WelcomePanel";
 
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-export async function getServerSideProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["header"])),
-    },
-  };
-}
+const WelcomeWrapper = styled.div`
+  height: 80vh;
+`;
 
 export default function Home() {
   return (
@@ -18,7 +16,18 @@ export default function Home() {
       <Head>
         <title>Fabrica Logs</title>
       </Head>
-      <MainHeader />
+      <WelcomeWrapper>
+        <MainHeader />
+        <WelcomePanel />
+      </WelcomeWrapper>
     </>
   );
+}
+
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["header"])),
+    },
+  };
 }
