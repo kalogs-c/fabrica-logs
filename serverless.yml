@@ -1,0 +1,7 @@
+myNextApp:
+  component: "@sls-next/serverless-component@1.19.0-alpha.0"
+  inputs:
+    timeout: 30
+    build:
+      postBuildCommands: ["node serverless-post-build.js"]
+  memory: 1024
