@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
   }
-  @media (min-width: 800px) {
+  @media (min-width: 1000px) {
     display: none;
   }
 `;
