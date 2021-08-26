@@ -63,3 +63,10 @@ export const SocialWrapper = styled.div`
     height: 50px;
   }
 `;
+
+
+export const LanguageSwitcher = styled.ul`
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+`

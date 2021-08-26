@@ -5,15 +5,19 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 
 import Lottie from "react-lottie";
-import Menu from "./../../../LottieFiles/Menu/menu.json";
+import Menu from "@LottieFiles/Menu/menu.json";
 
 // components
-import { Button, Wrapper, NavWrapper, SocialWrapper } from "./styles";
-import MenuItem from "../MenuCommuns/MenuItem";
-import LanguageSwitcher from "../MenuCommuns/LanguageSwitcher";
+import { Button, Wrapper, NavWrapper, SocialWrapper, LanguageSwitcher } from "./styles";
+import MenuItem from "@components/Header/MenuCommuns/MenuItem";
+import Link from 'next/link'
 
 // SVGs
-import { GithubSVG, GmailSVG, LinkedInSVG } from "./../MenuCommuns/svgs";
+import {
+  GithubSVG,
+  GmailSVG,
+  LinkedInSVG,
+} from "@components/Header/MenuCommuns/svgs";
 
 function MobileMenu() {
   const { t } = useTranslation();
@@ -77,7 +81,19 @@ function MobileMenu() {
                 <LinkedInSVG />
               </a>
             </SocialWrapper>
-            <LanguageSwitcher />
+            <LanguageSwitcher>
+              <li>
+                <Link href="/" locale="pt">
+                  PT
+                </Link>
+              </li>
+              <li> | </li>
+              <li>
+                <Link href="/" locale="en">
+                  EN
+                </Link>
+              </li>
+            </LanguageSwitcher>
           </NavWrapper>
         </motion.div>
         <Button
