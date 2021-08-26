@@ -3,10 +3,10 @@ import { useState } from "react";
 
 // components
 import { Dropdown, Wrapper, Item } from "./styles";
-import DropdownItem from "./DropdownItem";
+import DropdownItem from "../DropdownItem";
 
 // SVGs
-import { GithubSVG, GmailSVG, LinkedInSVG } from "../../MenuCommuns/svgs";
+import { GithubSVG, GmailSVG, LinkedInSVG } from "@components/Header/MenuCommuns/svgs";
 
 interface DropdownMenuItemProps {
   title: string;

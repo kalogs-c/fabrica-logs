@@ -3,8 +3,8 @@ import Head from "next/head";
 import styled from "styled-components";
 
 // Components
-import MainHeader from "./../src/components/Header";
-import WelcomePanel from "./../src/components/WelcomePanel";
+import MainHeader from "@components/Header";
+import WelcomePanel from "@components/WelcomePanel";
 
 const WelcomeWrapper = styled.div`
   height: 80vh;

@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import rotatingGear from "./../../LottieFiles/RotatingGear/gear.json";
+import rotatingGear from "@LottieFiles/RotatingGear/gear.json";
 import router from "next/router";
 
 // components
