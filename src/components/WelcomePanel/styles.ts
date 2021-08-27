@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   height: 80%;
 `;
@@ -26,14 +27,15 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  padding: 2rem;
+  padding: 1rem 2rem;
+  margin-bottom: 5rem;
 
   @media (min-width: 600px) {
-    padding: 4rem;
+    padding: 2rem 4rem;
   }
 
   @media (min-width: 800px) {
-    padding: 7rem;
+    padding: 0 7rem;
   }
 
   span {

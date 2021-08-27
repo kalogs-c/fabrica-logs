@@ -5,9 +5,10 @@ import styled from "styled-components";
 // Components
 import MainHeader from "@components/Header";
 import WelcomePanel from "@components/WelcomePanel";
+import MiniAboutMe from "@components/MiniAboutMe";
 
 const WelcomeWrapper = styled.div`
-  height: 80vh;
+  height: 100vh;
 `;
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <MainHeader />
         <WelcomePanel />
       </WelcomeWrapper>
+      <MiniAboutMe />
     </>
   );
 }
