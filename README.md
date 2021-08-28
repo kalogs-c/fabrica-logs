@@ -1,4 +1,4 @@
-# Fabrica Logs
+# ![Peek 28-08-2021 12-58](https://user-images.githubusercontent.com/68122899/131223717-7753641b-8799-45a4-b114-484857eed2fe.gif)
 
 Fabrica Logs is an acronym with "Fabrica" that means "factory" in Portuguese with my nickname "Kalogs" it represents my portfolio, shows every single project that I made, technologies that I use, and what problem it solves.
 
