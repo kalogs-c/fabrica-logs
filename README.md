@@ -4,14 +4,14 @@ Fabrica Logs is an acronym with "Fabrica" that means "factory" in Portuguese wit
 
 Summary:
 <ul>
-  <li>Dependecies</li>
-  <li>See how it's going</li>
-  <li>How many languages does it supports?</li>
+  <li><a href="#dependecies">Dependecies</a></li>
+  <li><a href="#how-its-going">See how it's going</a></li>
+  <li><a href="#languages">How many languages does it supports?</a></li>
 </ul>
 
 <hr>
 
-## Depencies
+<h2 id="dependecies"> Depencies </h2>
 This application it's using NextJS with TypeScript and some libraries, which is:
 
 + next-i18next for multi-language
@@ -19,7 +19,7 @@ This application it's using NextJS with TypeScript and some libraries, which is:
 + styled-components to make fancy stuff
 + react-lottie to show elegant animations
 
-## See how it's going
+<h2 id="how-its-going"> See how it's going </h2>
 
 ### Access the website
 F.logs it's hosted with Vercel on a temporary link, which you can access by <a href="https://fabrica-logs-sepia.vercel.app" target="_blank">clicking here</a>
@@ -41,5 +41,6 @@ Step 3 - Now we need to build and run, for build use this command: <br>
 After, let's run it: <span><code>npm start</code> or <code>yarn start</code></span>
 <hr>
 
-## How many languages does it supports?
+<h2 id="languages"> How many languages does it supports?</h2>
+  
 Fabrica Logs is now available in English and Portuguese
