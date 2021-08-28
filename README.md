@@ -33,4 +33,13 @@ First, you have to have the necessary files, which you can get by <a href="https
   git clone https://github.com/carloshcamilo/fabrica-logs.git
 </code>
 <hr>
-Step 2 - Go to the directory using the command: <code>cd fabrica-logs</code>
+Step 2 - Go to the directory using the command <code>cd fabrica-logs</code> and install the dependencies typing <code>npm install</code> or <code>yarn</code> depending on which package manager are you using
+<hr>
+Step 3 - Now we need to build and run, for build use this command: <br>
+<span><code>npm run build</code> or <code>yarn build</code></span>
+<br>
+After, let's run it: <span><code>npm start</code> or <code>yarn start</code></span>
+<hr>
+
+## How many languages does it supports?
+Fabrica Logs is now available in English and Portuguese
