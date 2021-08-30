@@ -19,11 +19,15 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-    text-align: center;
-    padding: 3rem;
+    text-align: center;   
     font-weight: lighter;
+    padding: 1rem;
     width: 100%;
-    color: ${({ theme }) => theme.colors.primary}
+    color: ${({ theme }) => theme.colors.primary};
+
+    @media (min-width: 920px) {
+        padding: 3rem;
+    }
 `;
 
 export const Section = styled.section`
