@@ -1,8 +1,19 @@
 import { useTranslation } from "next-i18next";
 import { Container, Title, Section, SectionTitle, Paragraph } from "./styles";
 
+import Lottie from "react-lottie";
+import Monitor from '@LottieFiles/Monitor/monitor.json';
+
 function MiniAboutMe() {
   const { t } = useTranslation();
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Monitor,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   return (
     <>
       <Title>{t("miniaboutme:A little about me...")}</Title>
@@ -15,6 +26,7 @@ function MiniAboutMe() {
           </Paragraph>
           <Paragraph>{t("miniaboutme:I am also")}</Paragraph>
         </Section>
+        <Lottie options={defaultOptions} height={"80%"} width={"90%"} />
       </Container>
     </>
   );
