@@ -2,6 +2,7 @@ import Lottie from "react-lottie";
 import rotatingGears from "./../../LottieFiles/WelcomePageGear/gear.json";
 
 import { Container, LottieBackground, TextWrapper } from "./styles";
+import ScrollSign from "./ScrollSign"
 
 import Typical from "react-typical";
 import { useTranslation } from "next-i18next";
@@ -34,6 +35,7 @@ function WelcomePanel() {
           <span>{t("welcomepage:And this is my factory")}</span>
         </h1>
       </TextWrapper>
+      <ScrollSign />
       <LottieBackground>
         <Lottie options={defaultOptions} height={500} width={500} />
       </LottieBackground>
