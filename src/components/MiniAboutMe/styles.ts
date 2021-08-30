@@ -9,8 +9,12 @@ export const Container = styled.div`
     align-items: center;
 
     @media (min-width: 920px) {
-        padding: 0 3rem 3rem 3rem;
+        padding: 1rem 3rem 3rem 3rem;
         grid-template-columns: 1fr 1fr;
+
+        div {
+            height: 100%;
+        }
     }
 `;
 
