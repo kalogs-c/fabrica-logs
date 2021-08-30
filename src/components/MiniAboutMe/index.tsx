@@ -1,22 +1,22 @@
 import { useTranslation } from "next-i18next";
-import { Container } from "./styles";
+import { Container, Title, Section, SectionTitle, Paragraph } from "./styles";
 
 function MiniAboutMe() {
   const { t } = useTranslation();
   return (
-    <Container>
-      <h1>{t("miniaboutme:A little about me...")}</h1>
-      <h1>{t("header:Language")}</h1>
-      <section>
-        <p>{t("miniaboutme:My name is Carlos")}</p>
-        <p>{t("miniaboutme:I've been")}</p>
-        <p>
-          {t("miniaboutme:I'm always excited")} {" "}
-          {t("miniaboutme:my skills")}
-        </p>
-        <p>{t("miniaboutme:I am also")}</p>
-      </section>
-    </Container>
+    <>
+      <Title>{t("miniaboutme:A little about me...")}</Title>
+      <Container>
+        <Section>
+          <SectionTitle>{t("miniaboutme:I've been")}</SectionTitle>
+          <Paragraph>
+            {t("miniaboutme:I'm always excited")} {" "}
+            <a href="#skills">{t("miniaboutme:my skills")}</a>
+          </Paragraph>
+          <Paragraph>{t("miniaboutme:I am also")}</Paragraph>
+        </Section>
+      </Container>
+    </>
   );
 }
 
