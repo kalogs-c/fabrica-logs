@@ -8,7 +8,11 @@ import WelcomePanel from "@components/WelcomePanel";
 import MiniAboutMe from "@components/MiniAboutMe";
 
 const WelcomeWrapper = styled.div`
-  height: 100vh;
+  height: 90vh;
+
+  @media (min-width: 800px) {
+    height: 100vh;
+  }
 `;
 
 export default function Home() {

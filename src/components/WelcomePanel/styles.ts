@@ -5,11 +5,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 68.5%;
-
-  @media (min-width: 800px) {
-    height: 78.5%;
-  }
+  height: 75%;
 `;
 
 export const LottieBackground = styled.div`
