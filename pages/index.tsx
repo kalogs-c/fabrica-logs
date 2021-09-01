@@ -6,6 +6,7 @@ import styled from "styled-components";
 import MainHeader from "@components/Header";
 import WelcomePanel from "@components/WelcomePanel";
 import MiniAboutMe from "@components/MiniAboutMe";
+import Projects from "@components/Projects";
 
 const WelcomeWrapper = styled.div`
   height: 90vh;
@@ -26,12 +27,13 @@ export default function Home() {
         <WelcomePanel />
       </WelcomeWrapper>
       <MiniAboutMe />
+      <Projects />
     </>
   );
 }
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["header", "welcomepage", "miniaboutme"])),
+    ...(await serverSideTranslations(locale, ["header", "welcomepage", "miniaboutme", "projects"])),
   },
 });
