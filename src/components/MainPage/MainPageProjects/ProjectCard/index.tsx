@@ -1,7 +1,7 @@
 // Components
 import { Container, TextWrapper, Title, Subtitle } from "./styles";
 import Image from "next/image";
-import OpenCard from "@components/Projects/OpenCard";
+import OpenCard from "../ProjectCard";
 
 interface ProjectCard {
   id: string;
