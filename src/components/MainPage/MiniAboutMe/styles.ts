@@ -18,18 +18,6 @@ export const Container = styled.div`
     }
 `;
 
-export const Title = styled.h1`
-    text-align: center;   
-    font-weight: lighter;
-    padding: 1rem;
-    width: 100%;
-    color: ${({ theme }) => theme.colors.primary};
-
-    @media (min-width: 920px) {
-        padding: 3rem;
-    }
-`;
-
 export const Section = styled.section`
     display: flex;
     flex-direction: column;    
@@ -50,6 +38,7 @@ export const Paragraph = styled.p`
     color: #7D7268;
 
     a {
+        cursor: pointer;
         color: ${({ theme }) => theme.colors.primary};
     }
 `

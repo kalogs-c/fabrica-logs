@@ -1,4 +1,5 @@
-import { Container, Title } from "./styles";
+import { Container } from "./styles";
+import { Title } from "@components/MainPage/Communs/Title";
 import ProjectCard from "./ProjectCard";
 import { useTranslation } from "next-i18next";
 
