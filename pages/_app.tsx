@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 const theme = {
   colors: {
     primary: "#fba754",
+    darkerPrimaryColor: "#C78442",
     greyFont: "#999",
     darkFont: "#111111",
   },
