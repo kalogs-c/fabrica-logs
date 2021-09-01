@@ -33,8 +33,8 @@ function MiniAboutMe() {
                 })
               }
             >
-              {t("miniaboutme:my skills")}.
-            </a>
+              {t("miniaboutme:my skills")}
+            </a>.
           </Paragraph>
           <Paragraph>{t("miniaboutme:I am also")}</Paragraph>
         </Section>
