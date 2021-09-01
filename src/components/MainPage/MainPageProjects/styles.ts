@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 3rem 3rem 3rem;
-  gap: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 `;
 
 export const Title = styled.h2`

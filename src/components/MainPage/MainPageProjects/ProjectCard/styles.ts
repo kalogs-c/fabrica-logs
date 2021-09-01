@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.li`
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
 `;
 
 export const TextWrapper = styled.div`

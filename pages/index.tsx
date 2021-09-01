@@ -1,39 +1,18 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Head from "next/head";
-import styled from "styled-components";
 
-// Components
-import MainHeader from "@components/Header";
-import WelcomePanel from "@components/WelcomePanel";
-import MiniAboutMe from "@components/MiniAboutMe";
-import Projects from "@components/Projects";
-
-const WelcomeWrapper = styled.div`
-  height: 90vh;
-
-  @media (min-width: 800px) {
-    height: 100vh;
-  }
-`;
+import MainPage from "@src/components/MainPage";
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Fabrica Logs</title>
-      </Head>
-      <WelcomeWrapper>
-        <MainHeader />
-        <WelcomePanel />
-      </WelcomeWrapper>
-      <MiniAboutMe />
-      <Projects />
-    </>
-  );
+  return <MainPage />;
 }
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["header", "welcomepage", "miniaboutme", "projects"])),
+    ...(await serverSideTranslations(locale, [
+      "header",
+      "welcomepage",
+      "miniaboutme",
+      "main-page-projects",
+    ])),
   },
 });

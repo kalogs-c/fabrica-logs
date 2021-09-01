@@ -9,7 +9,7 @@ import Menu from "@LottieFiles/Menu/menu.json";
 
 // components
 import { Button, Wrapper, NavWrapper, SocialWrapper, LanguageSwitcher } from "./styles";
-import MenuItem from "@components/Header/MenuCommuns/MenuItem";
+import MenuItem from "@src/components/MainPage/Header/MenuCommuns/MenuItem";
 import Link from 'next/link'
 
 // SVGs
@@ -17,7 +17,7 @@ import {
   GithubSVG,
   GmailSVG,
   LinkedInSVG,
-} from "@components/Header/MenuCommuns/svgs";
+} from "@src/components/MainPage/Header/MenuCommuns/svgs";
 
 function MobileMenu() {
   const { t } = useTranslation();

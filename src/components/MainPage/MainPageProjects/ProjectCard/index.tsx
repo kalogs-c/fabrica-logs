@@ -1,5 +1,7 @@
+// Components
 import { Container, TextWrapper, Title, Subtitle } from "./styles";
 import Image from "next/image";
+import OpenCard from "@components/Projects/OpenCard";
 
 interface ProjectCard {
   id: string;
@@ -9,7 +11,7 @@ interface ProjectCard {
 
 function ProjectCard({ id, title, subtitle }: ProjectCard) {
   return (
-    <Container id={id}>
+    <Container>
       <Image
         src="https://picsum.photos/300/200"
         alt="Ramdom image"

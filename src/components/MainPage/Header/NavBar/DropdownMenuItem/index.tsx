@@ -6,7 +6,7 @@ import { Dropdown, Wrapper, Item } from "./styles";
 import DropdownItem from "../DropdownItem";
 
 // SVGs
-import { GithubSVG, GmailSVG, LinkedInSVG } from "@components/Header/MenuCommuns/svgs";
+import { GithubSVG, GmailSVG, LinkedInSVG } from "@src/components/MainPage/Header/MenuCommuns/svgs";
 
 interface DropdownMenuItemProps {
   title: string;

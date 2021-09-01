@@ -1,5 +1,5 @@
 import Lottie from "react-lottie";
-import rotatingGears from "./../../LottieFiles/WelcomePageGear/gear.json";
+import rotatingGears from "../../../LottieFiles/WelcomePageGear/gear.json";
 
 import { Container, LottieBackground, TextWrapper } from "./styles";
 import ScrollSign from "./ScrollSign"
