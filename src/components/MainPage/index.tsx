@@ -6,6 +6,7 @@ import MainHeader from "./Header";
 import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
 import Projects from "./MainPageProjects";
+import MySkills from "./MySkills";
 
 export default function MainPage() {
   return (
@@ -19,6 +20,7 @@ export default function MainPage() {
       </WelcomeWrapper>
       <MiniAboutMe />
       <Projects />
+      <MySkills />
     </>
   );
 }

@@ -4,6 +4,6 @@ module.exports = {
   reactStrictMode: true,
   i18n,
   images: {
-    domains: ["picsum.photos"],
+    domains: ["picsum.photos", "pics.freeicons.io"],
   },
 };
