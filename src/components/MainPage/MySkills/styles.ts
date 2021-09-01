@@ -6,7 +6,7 @@ export const Container = styled.ul`
   justify-content: center;
   margin-top: 2rem;
   
-  @media (min-width: 400px) {
+  @media (min-width: 360px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
