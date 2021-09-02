@@ -46,7 +46,7 @@ function Form() {
               isStopped: false,
               direction: animationState.direction === 1 ? -1 : 1,
             });
-            setEmailSended(true)
+            //setEmailSended(true)
           }}
         >
           <Input type="text" name="name" placeholder={t("email-inputs:Name")} />
