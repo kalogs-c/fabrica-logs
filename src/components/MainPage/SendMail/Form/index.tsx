@@ -12,8 +12,11 @@ import {
   ButtonLabel,
   SubmitWrapper,
 } from "./styles";
+import { useTranslation } from "next-i18next";
 
 function Form() {
+  const { t } = useTranslation();
+
   // Lottie config
   const defaultOptions = {
     loop: false,
@@ -42,9 +45,13 @@ function Form() {
             });
           }}
         >
-          <Input type="text" name="name" placeholder="Name" />
+          <Input type="text" name="name" placeholder={t("email-inputs:Name")} />
           <Input type="email" name="email" placeholder="Email" />
-          <ContentInput type="text" name="content" placeholder="Content" />
+          <ContentInput
+            type="text"
+            name="content"
+            placeholder={t("email-inputs:Content")}
+          />
           <button
             type="submit"
             id="submit-btn"
@@ -52,7 +59,7 @@ function Form() {
           ></button>
         </FormCamp>
         <SubmitWrapper>
-          <ButtonLabel htmlFor="submit-btn">Let's work together!</ButtonLabel>
+          <ButtonLabel htmlFor="submit-btn">{t("email-inputs:Let's work together!")}</ButtonLabel>
           <div>
             <Lottie
               options={defaultOptions}
