@@ -40,6 +40,7 @@ export const ButtonLabel = styled.label`
   transition: 0.3s all ease-in-out;
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
+  cursor: pointer;
 
   &:hover {
     opacity: 80%;
@@ -55,7 +56,6 @@ export const SubmitWrapper = styled.label`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   margin-bottom: 1rem;
 
   div {
