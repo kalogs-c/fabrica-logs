@@ -1,12 +1,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { scroller } from "react-scroll";
 
 // components
 import { Dropdown, Wrapper, Item } from "./styles";
 import DropdownItem from "../DropdownItem";
 
 // SVGs
-import { GithubSVG, GmailSVG, LinkedInSVG } from "@src/components/MainPage/Header/MenuCommuns/svgs";
+import {
+  GithubSVG,
+  GmailSVG,
+  LinkedInSVG,
+} from "@src/components/MainPage/Header/MenuCommuns/svgs";
 
 interface DropdownMenuItemProps {
   title: string;
@@ -38,7 +43,15 @@ function DropdownMenuItem({ title }: DropdownMenuItemProps) {
           <DropdownItem content={title} />
           <motion.div animate={isOpen ? "open" : "closed"} variants={variants}>
             <Dropdown>
-              <Item href="#mail">
+              <Item
+                onClick={() =>
+                  scroller.scrollTo("email", {
+                    duration: 2000,
+                    delay: 0.025,
+                    smooth: "easeInOutQuart",
+                  })
+                }
+              >
                 <GmailSVG />
                 <span>Gmail</span>
               </Item>
