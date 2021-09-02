@@ -1,0 +1,64 @@
+import styled from "styled-components";
+
+export const FormCamp = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+`;
+
+export const Input = styled.input`
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+`;
+
+export const ContentInput = styled.textarea`
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: transparent;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  height: 200px;
+`;
+
+export const Wrapper = styled.div`
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+export const ButtonLabel = styled.label`
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  transition: 0.3s all ease-in-out;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: #fff;
+
+  @media (min-width: 800px) {
+    max-width: 300px;
+  }
+`;
+
+export const SubmitWrapper = styled.label`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  div {
+    display: none;
+
+    @media (min-width: 800px) {
+      display: block;
+    }
+  }
+`;

@@ -7,6 +7,7 @@ import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
 import Projects from "./MainPageProjects";
 import MySkills from "./MySkills";
+import SendMail from "./SendMail";
 
 export default function MainPage() {
   return (
@@ -21,6 +22,7 @@ export default function MainPage() {
       <MiniAboutMe />
       <Projects />
       <MySkills />
+      <SendMail />
     </>
   );
 }
