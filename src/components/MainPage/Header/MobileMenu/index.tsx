@@ -1,5 +1,6 @@
 import { motion, useCycle } from "framer-motion";
 import { useState } from "react";
+import { scroller } from "react-scroll";
 
 // Translation
 import { useTranslation } from "next-i18next";
@@ -8,9 +9,15 @@ import Lottie from "react-lottie";
 import Menu from "@LottieFiles/Menu/menu.json";
 
 // components
-import { Button, Wrapper, NavWrapper, SocialWrapper, LanguageSwitcher } from "./styles";
+import {
+  Button,
+  Wrapper,
+  NavWrapper,
+  SocialWrapper,
+  LanguageSwitcher,
+} from "./styles";
 import MenuItem from "@src/components/MainPage/Header/MenuCommuns/MenuItem";
-import Link from 'next/link'
+import Link from "next/link";
 
 // SVGs
 import {
@@ -63,7 +70,16 @@ function MobileMenu() {
             <MenuItem goTo="/projects" content={t("header:Projects")} />
             <MenuItem goTo="/about" content={t("header:About me")} />
             <SocialWrapper>
-              <a href="#mail">
+              <a
+                onClick={() => {
+                  cycleOpen();
+                  scroller.scrollTo("email", {
+                    duration: 2000,
+                    delay: 0.025,
+                    smooth: "easeInQuart",
+                  });
+                }}
+              >
                 <GmailSVG />
               </a>
               <a

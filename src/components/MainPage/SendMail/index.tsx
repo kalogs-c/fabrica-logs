@@ -5,7 +5,7 @@ import { Title } from "@components/MainPage/Communs/Title";
 function SendMail() {
   return (
     <>
-      <Container>
+      <Container className="email">
         <Title>Contact me</Title>
         <Form />
       </Container>

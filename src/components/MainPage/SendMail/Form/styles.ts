@@ -25,7 +25,7 @@ export const ContentInput = styled.textarea`
 
 export const Wrapper = styled.div`
   display: grid;
-  gap: 1rem;
+  gap: 1erem;
 
   @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
