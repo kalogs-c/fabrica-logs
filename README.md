@@ -32,6 +32,13 @@ First, you have to have the necessary files, which you can get by <a href="https
 <code>
   git clone https://github.com/carloshcamilo/fabrica-logs.git
 </code>
+<br>
+<br>
+Or using the <a href="https://cli.github.com/">GitHub CLI</a> ->
+<code>
+ gh repo clone carloshcamilo/fabrica-logs
+</code>
+
 <hr>
 Step 2 - Go to the directory using the command <code>cd fabrica-logs</code> and install the dependencies typing <code>npm install</code> or <code>yarn</code> depending on which package manager are you using
 <hr>
