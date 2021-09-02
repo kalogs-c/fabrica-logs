@@ -33,7 +33,7 @@ function Form() {
     direction: -1,
   });
 
-  const [emailSended, setEmailSended] = useState(true);
+  const [emailSended, setEmailSended] = useState(false);
 
   return (
     <>
