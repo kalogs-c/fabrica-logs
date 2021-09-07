@@ -112,7 +112,7 @@ function Form() {
             <ButtonLabel
               onClick={(e) => {
                 e.preventDefault();
-                setEmailSended(false);
+                setEmailSended("");
               }}
             >
               {emailSended === "good" && t("email-inputs:Great!")}
