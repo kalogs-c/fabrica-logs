@@ -41,6 +41,10 @@ function Form() {
   const emailRef = useRef();
   const contentRef = useRef();
 
+  const name = nameRef.current.value;
+  const email = emailRef.current.value;
+  const content = contentRef.current.value;
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -52,10 +56,6 @@ function Form() {
     });
 
     // Form data
-    let name = nameRef.current.value;
-    let email = emailRef.current.value;
-    let content = contentRef.current.value;
-
     const data = {
       name,
       email,
@@ -135,7 +135,7 @@ function Form() {
                 eventListeners={[
                   {
                     eventName: "complete",
-                    callback: () => setEmailSended("bad"),
+                    callback: () => setEmailSended(emailCallback),
                   },
                 ]}
               />
