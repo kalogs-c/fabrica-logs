@@ -37,9 +37,9 @@ function Form() {
   const [emailSended, setEmailSended] = useState("");
   const [emailCallback, setEmailCallback] = useState("");
 
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const contentRef = useRef();
+  const nameRef = useRef(null);
+  const emailRef = useRef(null);
+  const contentRef = useRef(null);
 
   const name = nameRef.current.value;
   const email = emailRef.current.value;
