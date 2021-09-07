@@ -2,8 +2,7 @@ import nodemailer from "nodemailer";
 
 export default function (req, res) {
   if (req.method !== "POST") {
-    res.status(400);
-    res.json({
+    res.status(400).json({
       message: "Method not allowed",
     });
     return;
@@ -43,5 +42,5 @@ export default function (req, res) {
     else console.log(info);
   });
 
-  res.status(200);
+  res.status(200).json({ message: "Success" });
 }

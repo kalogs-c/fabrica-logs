@@ -35,6 +35,7 @@ function Form() {
   });
 
   const [emailSended, setEmailSended] = useState("");
+  const [emailCallback, setEmailCallback] = useState("");
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -68,17 +69,12 @@ function Form() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        name = "";
-        email = "";
-        content = "";
-        setEmailSended("good");
-        console.log(emailSended);
+    }).then(async (res) => {
+      if ((await res.status) === 200) {
+        setEmailCallback("good");
         return;
       }
-      setEmailSended("bad");
-      console.log(emailSended);
+      setEmailCallback("bad");
     });
   };
 
@@ -119,9 +115,8 @@ function Form() {
                 setEmailSended(false);
               }}
             >
-              {emailSended === "good"
-                ? t("email-inputs:Great!")
-                : t("email-inputs:I'll try again")}
+              {emailSended === "good" && t("email-inputs:Great!")}
+              {emailSended === "bad" && t("email-inputs:I'll try again")}
             </ButtonLabel>
           </Modal>
         ) : (
@@ -137,6 +132,12 @@ function Form() {
                 direction={animationState.direction}
                 isStopped={animationState.isStopped}
                 isPaused={animationState.isPaused}
+                eventListeners={[
+                  {
+                    eventName: "complete",
+                    callback: () => setEmailSended("bad"),
+                  },
+                ]}
               />
             </div>
           </SubmitWrapper>
