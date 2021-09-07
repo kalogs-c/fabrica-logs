@@ -41,10 +41,6 @@ function Form() {
   const emailRef = useRef(null);
   const contentRef = useRef(null);
 
-  const name = nameRef.current.value;
-  const email = emailRef.current.value;
-  const content = contentRef.current.value;
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -56,6 +52,10 @@ function Form() {
     });
 
     // Form data
+    const name = nameRef.current.value;
+    const email = emailRef.current.value;
+    const content = contentRef.current.value;
+  
     const data = {
       name,
       email,
