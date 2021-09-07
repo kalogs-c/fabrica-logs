@@ -46,7 +46,7 @@ function Form() {
               isStopped: false,
               direction: animationState.direction === 1 ? -1 : 1,
             });
-            //setEmailSended(true)
+            // setEmailSended(true)
           }}
         >
           <Input type="text" name="name" placeholder={t("email-inputs:Name")} />
@@ -64,14 +64,14 @@ function Form() {
         </FormCamp>
         {emailSended ? (
           <Modal>
-            <h3>Email enviado com sucesso!</h3>
+            <h3>{t("email-inputs:Email sent!")}</h3>
             <ButtonLabel
               onClick={(e) => {
                 e.preventDefault();
                 setEmailSended(false);
               }}
             >
-              Maravilha!
+              {t("email-inputs:Great!")}
             </ButtonLabel>
           </Modal>
         ) : (
