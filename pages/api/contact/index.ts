@@ -38,7 +38,10 @@ export default function (req, res) {
   };
 
   transporter.sendMail(mailData, (err, info) => {
-    if (err) console.log(err);
+    if (err) {
+      console.log(err);
+      res.status(200).json({ message: "Something wrong" });
+    }
     else console.log(info);
   });
 
