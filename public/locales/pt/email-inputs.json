@@ -3,6 +3,8 @@
   "Name": "Nome",
   "Content": "Conteúdo",
   "Let's work together!": "Vamos trabalhar juntos!",
-  "Email sent!": "Email sent!",
-  "Great!": "Maravilha!"
+  "Email sent!": "Email enviado!",
+  "Ops :( Something went wrong": "Ops :( Algo deu de errado",
+  "Great!": "Maravilha!",
+  "I'll try again": "Vou tentar de novo"
 }
