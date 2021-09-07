@@ -51,10 +51,14 @@ function Form() {
     });
 
     // Form data
+    let name = nameRef.current.value;
+    let email = emailRef.current.value;
+    let content = contentRef.current.value;
+
     const data = {
-      name: nameRef.current.value,
-      email: emailRef.current.value,
-      content: contentRef.current.value,
+      name,
+      email,
+      content,
     };
 
     fetch("api/contact", {
@@ -66,9 +70,9 @@ function Form() {
       body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        contentRef.current.value = "";
+        name = "";
+        email = "";
+        content = "";
         setEmailSended("good");
         console.log(emailSended);
         return;
