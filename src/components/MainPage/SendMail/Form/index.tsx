@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useTranslation } from "next-i18next";
+import { useRef } from "react";
 
 import Lottie from "react-lottie";
 import SendingMail from "@LottieFiles/SendingMail/sendingMail.json";
@@ -13,7 +15,6 @@ import {
   SubmitWrapper,
   Modal,
 } from "./styles";
-import { useTranslation } from "next-i18next";
 
 function Form() {
   const { t } = useTranslation();
@@ -33,25 +34,63 @@ function Form() {
     direction: -1,
   });
 
-  const [emailSended, setEmailSended] = useState(false);
+  const [emailSended, setEmailSended] = useState("");
+
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const contentRef = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Letter animation
+    setAnimationState({
+      ...animationState,
+      isStopped: false,
+      direction: animationState.direction === 1 ? -1 : 1,
+    });
+
+    // Form data
+    const data = {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      content: contentRef.current.value,
+    };
+
+    fetch("api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        contentRef.current.value = "";
+        setEmailSended("good");
+        console.log(emailSended);
+        return;
+      }
+      setEmailSended("bad");
+      console.log(emailSended);
+    });
+  };
 
   return (
     <>
       <Wrapper>
-        <FormCamp
-          onSubmit={(e) => {
-            e.preventDefault();
-            setAnimationState({
-              ...animationState,
-              isStopped: false,
-              direction: animationState.direction === 1 ? -1 : 1,
-            });
-            // setEmailSended(true)
-          }}
-        >
-          <Input type="text" name="name" placeholder={t("email-inputs:Name")} />
-          <Input type="email" name="email" placeholder="Email" />
+        <FormCamp onSubmit={(e) => handleSubmit(e)}>
+          <Input
+            ref={nameRef}
+            type="text"
+            name="name"
+            placeholder={t("email-inputs:Name")}
+          />
+          <Input ref={emailRef} type="email" name="email" placeholder="Email" />
           <ContentInput
+            ref={contentRef}
             type="text"
             name="content"
             placeholder={t("email-inputs:Content")}
@@ -62,16 +101,23 @@ function Form() {
             style={{ display: "none" }}
           ></button>
         </FormCamp>
+
         {emailSended ? (
           <Modal>
-            <h3>{t("email-inputs:Email sent!")}</h3>
+            <h3>
+              {emailSended === "good"
+                ? t("email-inputs:Email sent!")
+                : t("email-inputs:Ops :( Something went wrong")}
+            </h3>
             <ButtonLabel
               onClick={(e) => {
                 e.preventDefault();
                 setEmailSended(false);
               }}
             >
-              {t("email-inputs:Great!")}
+              {emailSended === "good"
+                ? t("email-inputs:Great!")
+                : t("email-inputs:I'll try again")}
             </ButtonLabel>
           </Modal>
         ) : (
