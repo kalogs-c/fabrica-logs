@@ -13,13 +13,11 @@ export default function (req, res) {
   const myEmail = "carloscamilocontato@gmail.com";
 
   const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
+    service: "hotmail",
     auth: {
       user: email,
       pass: password,
     },
-    secure: true,
   });
 
   const mailData = {
@@ -41,8 +39,7 @@ export default function (req, res) {
     if (err) {
       console.log(err);
       res.status(200).json({ message: "Something wrong" });
-    }
-    else console.log(info);
+    } else console.log(info);
   });
 
   res.status(200).json({ message: "Success" });

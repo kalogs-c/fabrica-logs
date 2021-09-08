@@ -85,3 +85,23 @@ export const Modal = styled.div`
     margin-top: 0;
   }
 `;
+
+export const Footer = styled.footer`
+  background-color: #fff;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  position: relative;
+  bottom: -1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  gap: 3px;
+
+  a {
+    background-color: #eaeaea;
+    border-radius: 4px;
+    padding: 2px;
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
