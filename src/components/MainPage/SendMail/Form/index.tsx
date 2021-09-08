@@ -14,6 +14,7 @@ import {
   ButtonLabel,
   SubmitWrapper,
   Modal,
+  Footer,
 } from "./styles";
 
 function Form() {
@@ -55,7 +56,7 @@ function Form() {
     const name = nameRef.current.value;
     const email = emailRef.current.value;
     const content = contentRef.current.value;
-  
+
     const data = {
       name,
       email,
@@ -84,13 +85,21 @@ function Form() {
         <FormCamp onSubmit={(e) => handleSubmit(e)}>
           <Input
             ref={nameRef}
+            required
             type="text"
             name="name"
             placeholder={t("email-inputs:Name")}
           />
-          <Input ref={emailRef} type="email" name="email" placeholder="Email" />
+          <Input
+            ref={emailRef}
+            required
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
           <ContentInput
             ref={contentRef}
+            required
             type="text"
             name="content"
             placeholder={t("email-inputs:Content")}
@@ -140,6 +149,10 @@ function Form() {
                 ]}
               />
             </div>
+            <Footer>
+              Not working? Try sending directly to{" "}
+              <a href="mailto:carloscamilocontato@gmail.com">carloscamilocontato@gmail.com</a>
+            </Footer>
           </SubmitWrapper>
         )}
       </Wrapper>
