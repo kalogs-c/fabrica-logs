@@ -2,12 +2,12 @@ import Head from "next/head";
 
 // Components
 import { WelcomeWrapper } from "./style";
-import MainHeader from "./Header";
+import MainHeader from "@components/Communs/Header";
 import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
 import Projects from "./MainPageProjects";
 import MySkills from "./MySkills";
-import SendMail from "./SendMail";
+import SendMail from "@components/Communs/SendMail";
 
 export default function MainPage() {
   return (

@@ -11,7 +11,7 @@ import {
   GithubSVG,
   GmailSVG,
   LinkedInSVG,
-} from "@src/components/MainPage/Header/MenuCommuns/svgs";
+} from "@src/components/Communs/Header/MenuCommuns/svgs";
 
 interface DropdownMenuItemProps {
   title: string;
