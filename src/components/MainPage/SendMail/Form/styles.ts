@@ -60,6 +60,7 @@ export const SubmitWrapper = styled.label`
 
   div {
     display: none;
+    pointer-events: none;
 
     @media (min-width: 800px) {
       display: block;
