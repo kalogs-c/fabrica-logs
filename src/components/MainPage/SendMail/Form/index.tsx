@@ -35,7 +35,7 @@ function Form() {
     direction: -1,
   });
 
-  const [emailSended, setEmailSended] = useState("goodRequest");
+  const [emailSended, setEmailSended] = useState("");
   let callback = "";
 
   // Data camps Ref
@@ -46,13 +46,6 @@ function Form() {
   // Submit Form function
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Letter animation
-    setAnimationState({
-      ...animationState,
-      isStopped: false,
-      direction: animationState.direction === 1 ? -1 : 1,
-    });
 
     // Form data
     const name = nameRef.current.value;
@@ -73,7 +66,15 @@ function Form() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then(({ status }) => (status === 200 ? "goodRequest" : "badRequest"));
+    }).then(({ status }) => {
+      // Letter animation
+      setAnimationState({
+        ...animationState,
+        isStopped: false,
+        direction: animationState.direction === 1 ? -1 : 1,
+      });
+      return status === 200 ? "goodRequest" : "badRequest";
+    });
 
     console.log(callback);
   };
