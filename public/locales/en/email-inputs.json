@@ -3,8 +3,9 @@
   "Name": "Name",
   "Content": "Content",
   "Let's work together!": "Let's work together!",
-  "Email sent!":"Email enviado com sucesso!",
-  "Ops :( Something went wrong": "Ops :( Something went wrong",
+  "Email sent!":"Email sent!",
+  "Ops": "Ops :( Something went wrong",
   "Great!": "Great!",
-  "I'll try again": "I'll try again"
+  "I'll try again": "I'll try again",
+  "Not working? Try sending directly to": "Not working? Try sending directly to" 
 }
