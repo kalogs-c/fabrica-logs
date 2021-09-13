@@ -3,6 +3,7 @@ import Head from "next/head";
 // Components
 import { Container } from "./styles";
 import MainHeader from "@components/Communs/Header";
+import SendMail from "@components/Communs/SendMail";
 
 function AboutPage() {
   return (
@@ -14,6 +15,7 @@ function AboutPage() {
         <MainHeader />
         <h1>AboutPage</h1>
       </Container>
+      <SendMail />
     </>
   );
 }

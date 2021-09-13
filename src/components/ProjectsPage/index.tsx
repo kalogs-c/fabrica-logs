@@ -3,6 +3,7 @@ import Head from "next/head";
 // Components
 import { Container } from "./styles";
 import MainHeader from "@components/Communs/Header";
+import SendMail from "@components/Communs/SendMail";
 
 function ProjectsPage() {
   return (
@@ -14,6 +15,7 @@ function ProjectsPage() {
         <MainHeader />
         <h1>ProjectsPage</h1>
       </Container>
+      <SendMail />
     </>
   );
 }
