@@ -35,7 +35,7 @@ function Form() {
     direction: -1,
   });
 
-  const [emailSended, setEmailSended] = useState("");
+  const [emailSended, setEmailSended] = useState("goodRequest");
   let callback = "";
 
   // Data camps Ref
@@ -115,7 +115,7 @@ function Form() {
             <h3>
               {emailSended === "goodRequest"
                 ? t("email-inputs:Email sent!")
-                : t("email-inputs:Ops :( Something went wrong")}
+                : t("email-inputs:Ops")}
             </h3>
             <ButtonLabel
               onClick={(e) => {
@@ -150,7 +150,7 @@ function Form() {
               />
             </div>
             <Footer>
-              Not working? Try sending directly to{" "}
+              {t("email-inputs:Not working? Try sending directly to")}{" "}
               <a href="mailto:carloscamilocontato@gmail.com">
                 carloscamilocontato@gmail.com
               </a>

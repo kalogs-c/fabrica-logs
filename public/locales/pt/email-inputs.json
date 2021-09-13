@@ -4,7 +4,8 @@
   "Content": "Conteúdo",
   "Let's work together!": "Vamos trabalhar juntos!",
   "Email sent!": "Email enviado!",
-  "Ops :( Something went wrong": "Ops :( Algo deu de errado",
+  "Ops": "Ops :( Algo deu errado",
   "Great!": "Maravilha!",
-  "I'll try again": "Vou tentar de novo"
+  "I'll try again": "Vou tentar de novo",
+  "Not working? Try sending directly to": "Não esta funcionado? Tente mandar diretamente para"
 }
