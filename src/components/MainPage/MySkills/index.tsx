@@ -12,7 +12,7 @@ function MySkills() {
       <Title className="myskills" >{t("myskills:My skills")}</Title>
       <Container>
         {skillList.map(({ name, imageUrl }) => (
-          <SkillCard imageUrl={imageUrl} name={name} />
+          <SkillCard key={name} imageUrl={imageUrl} name={name} />
         ))}
       </Container>
     </>

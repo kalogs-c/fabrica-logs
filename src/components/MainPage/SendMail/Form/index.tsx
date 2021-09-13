@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "next-i18next";
 import { useRef } from "react";
 
@@ -36,13 +36,15 @@ function Form() {
   });
 
   const [emailSended, setEmailSended] = useState("");
-  const [emailCallback, setEmailCallback] = useState("");
+  let callback = "";
 
+  // Data camps Ref
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const contentRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  // Submit Form function
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Letter animation
@@ -63,20 +65,17 @@ function Form() {
       content,
     };
 
-    fetch("api/contact", {
+    // API request
+    callback = await fetch("api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then(async (res) => {
-      if ((await res.status) === 200) {
-        setEmailCallback("good");
-        return;
-      }
-      setEmailCallback("bad");
-    });
+    }).then(({ status }) => (status === 200 ? "goodRequest" : "badRequest"));
+
+    console.log(callback);
   };
 
   return (
@@ -114,18 +113,19 @@ function Form() {
         {emailSended ? (
           <Modal>
             <h3>
-              {emailSended === "good"
+              {emailSended === "goodRequest"
                 ? t("email-inputs:Email sent!")
                 : t("email-inputs:Ops :( Something went wrong")}
             </h3>
             <ButtonLabel
               onClick={(e) => {
                 e.preventDefault();
-                setEmailSended("");
+                setEmailSended(null);
               }}
             >
-              {emailSended === "good" && t("email-inputs:Great!")}
-              {emailSended === "bad" && t("email-inputs:I'll try again")}
+              {emailSended === "goodRequest"
+                ? t("email-inputs:Great!")
+                : t("email-inputs:I'll try again")}
             </ButtonLabel>
           </Modal>
         ) : (
@@ -144,14 +144,16 @@ function Form() {
                 eventListeners={[
                   {
                     eventName: "complete",
-                    callback: () => setEmailSended(emailCallback),
+                    callback: () => setEmailSended(callback),
                   },
                 ]}
               />
             </div>
             <Footer>
               Not working? Try sending directly to{" "}
-              <a href="mailto:carloscamilocontato@gmail.com">carloscamilocontato@gmail.com</a>
+              <a href="mailto:carloscamilocontato@gmail.com">
+                carloscamilocontato@gmail.com
+              </a>
             </Footer>
           </SubmitWrapper>
         )}
