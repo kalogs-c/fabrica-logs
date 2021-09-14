@@ -131,6 +131,16 @@ function Form() {
           </Modal>
         ) : (
           <SubmitWrapper>
+            <div>
+              <Lottie
+                options={defaultOptions}
+                height={200}
+                width={200}
+                direction={animationState.direction}
+                isStopped={animationState.isStopped}
+                isPaused={animationState.isPaused}
+              />
+            </div>
             <ButtonLabel htmlFor="submit-btn">
               {t("email-inputs:Let's work together!")}
             </ButtonLabel>
