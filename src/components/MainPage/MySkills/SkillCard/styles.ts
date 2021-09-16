@@ -11,4 +11,5 @@ export const TechName = styled.span`
   color: ${({ theme }) => theme.colors.greyFont};
   padding: 3rem;
   padding-top: 2rem;
+  text-align: center;
 `;
