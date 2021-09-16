@@ -16,6 +16,7 @@ import {
   Modal,
   Footer,
 } from "./styles";
+import LoadingBallsAnimation from "./LoadingAnimation/LetterAnimation";
 
 function Form() {
   const { t } = useTranslation();
@@ -35,6 +36,8 @@ function Form() {
     direction: -1,
   });
 
+  const [isLoading, setLoading] = useState(false);
+
   const [emailSended, setEmailSended] = useState("");
   let callback = "";
 
@@ -46,7 +49,7 @@ function Form() {
   // Submit Form function
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    setLoading(true);
     // Form data
     const name = nameRef.current.value;
     const email = emailRef.current.value;
@@ -67,6 +70,7 @@ function Form() {
       },
       body: JSON.stringify(data),
     }).then(({ status }) => {
+      setLoading(false);
       // Letter animation
       setAnimationState({
         ...animationState,
@@ -82,34 +86,38 @@ function Form() {
   return (
     <>
       <Wrapper>
-        <FormCamp onSubmit={(e) => handleSubmit(e)}>
-          <Input
-            ref={nameRef}
-            required
-            type="text"
-            name="name"
-            placeholder={t("email-inputs:Name")}
-          />
-          <Input
-            ref={emailRef}
-            required
-            type="email"
-            name="email"
-            placeholder="Email"
-          />
-          <ContentInput
-            ref={contentRef}
-            required
-            type="text"
-            name="content"
-            placeholder={t("email-inputs:Content")}
-          />
-          <button
-            type="submit"
-            id="submit-btn"
-            style={{ display: "none" }}
-          ></button>
-        </FormCamp>
+        {isLoading ? (
+          <LoadingBallsAnimation />
+        ) : (
+          <FormCamp onSubmit={(e) => handleSubmit(e)}>
+            <Input
+              ref={nameRef}
+              required
+              type="text"
+              name="name"
+              placeholder={t("email-inputs:Name")}
+            />
+            <Input
+              ref={emailRef}
+              required
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <ContentInput
+              ref={contentRef}
+              required
+              type="text"
+              name="content"
+              placeholder={t("email-inputs:Content")}
+            />
+            <button
+              type="submit"
+              id="submit-btn"
+              style={{ display: "none" }}
+            ></button>
+          </FormCamp>
+        )}
 
         {emailSended ? (
           <Modal>
@@ -121,7 +129,7 @@ function Form() {
             <ButtonLabel
               onClick={(e) => {
                 e.preventDefault();
-                setEmailSended(null);
+                setEmailSended("");
               }}
             >
               {emailSended === "goodRequest"
@@ -131,9 +139,11 @@ function Form() {
           </Modal>
         ) : (
           <SubmitWrapper>
-            <ButtonLabel htmlFor="submit-btn">
-              {t("email-inputs:Let's work together!")}
-            </ButtonLabel>
+            {!isLoading && (
+              <ButtonLabel htmlFor="submit-btn">
+                {t("email-inputs:Let's work together!")}
+              </ButtonLabel>
+            )}
             <div>
               <Lottie
                 options={defaultOptions}
