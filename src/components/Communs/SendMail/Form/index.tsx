@@ -16,7 +16,7 @@ import {
   Modal,
   Footer,
 } from "./styles";
-import LoadingBallsAnimation from "./LoadingAnimation/LetterAnimation";
+import LoadingBallsAnimation from "./LoadingAnimation";
 
 function Form() {
   const { t } = useTranslation();
