@@ -12,17 +12,17 @@ function Projects() {
       <Title>{t("main-page-projects:Projects")}</Title>
       <Container>
         <ProjectCard
-          key="1"
+          keyId="1"
           title="Primeiro projeto"
           subtitle="Este é o meu primeiro projeto"
         />
         <ProjectCard
-          key="2"
+          keyId="2"
           title="Segundo projeto"
           subtitle="Este é o meu segundo projeto"
         />
         <ProjectCard
-          key="3"
+          keyId="3"
           title="Terceiro projeto"
           subtitle="Este é o meu terceiro projeto"
         />

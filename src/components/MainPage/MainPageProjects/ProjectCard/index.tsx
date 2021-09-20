@@ -3,14 +3,14 @@ import { Container, TextWrapper, Title, Subtitle } from "./styles";
 import Image from "next/image";
 
 interface ProjectCard {
-  key: string;
+  keyId: string;
   title: string;
   subtitle: string;
 }
 
-function ProjectCard({ key, title, subtitle }: ProjectCard) {
+function ProjectCard({ keyId, title, subtitle }: ProjectCard) {
   return (
-    <Container key={key}>
+    <Container key={keyId}>
       <Image
         src="https://picsum.photos/300/200"
         alt="Ramdom image"
