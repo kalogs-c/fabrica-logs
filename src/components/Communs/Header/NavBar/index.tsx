@@ -1,5 +1,5 @@
-import MenuItem from "@src/components/Communs/Header/MenuCommuns/MenuItem";
-import LanguageSwitcher from "@src/components/Communs/Header/MenuCommuns/LanguageSwitcher";
+import MenuItem from "@components/Communs/Header/MenuCommuns/MenuItem";
+import LanguageSwitcher from "@components/Communs/Header/MenuCommuns/LanguageSwitcher";
 import DropdownMenuItem from "./DropdownMenuItem";
 import { Container, List } from "./styles";
 
