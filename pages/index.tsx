@@ -13,7 +13,7 @@ export const getServerSideProps = async ({ locale }) => ({
       "welcomepage",
       "miniaboutme",
       "main-page-projects",
-      "myskills",
+      "some-skills",
       "email-inputs",
     ])),
   },
