@@ -18,7 +18,7 @@ interface DropdownMenuItemProps {
 }
 
 function DropdownMenuItem({ title }: DropdownMenuItemProps) {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   const variants = {
     open: { opacity: 1, height: "100%", display: "flex" },

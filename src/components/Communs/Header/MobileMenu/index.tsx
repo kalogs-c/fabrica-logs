@@ -30,7 +30,7 @@ function MobileMenu() {
   const { t } = useTranslation();
 
   // Lottie config
-  const defaultOptions = {
+  const defaultOptions: object = {
     loop: false,
     autoplay: false,
     animationData: Menu,
@@ -54,7 +54,7 @@ function MobileMenu() {
     },
   };
 
-  const [isOpen, cycleOpen] = useCycle(false, true);
+  const [isOpen, cycleOpen] = useCycle<boolean>(false, true);
   const [animationState, setAnimationState] = useState({
     isStopped: false,
     isPaused: false,

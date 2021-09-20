@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-export default function (req, res) {
+export default function (req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.status(400).json({
       message: "Method not allowed",
@@ -8,9 +9,9 @@ export default function (req, res) {
     return;
   }
 
-  const email = process.env.EMAIL;
-  const password = process.env.PASSWORD;
-  const myEmail = "carloscamilocontato@gmail.com";
+  const email: string = process.env.EMAIL;
+  const password: string = process.env.PASSWORD;
+  const myEmail: string = "carloscamilocontato@gmail.com";
 
   const transporter = nodemailer.createTransport({
     service: "hotmail",
@@ -20,7 +21,7 @@ export default function (req, res) {
     },
   });
 
-  const mailData = {
+  const mailData: object = {
     from: email,
     to: myEmail,
     subject: `Fabrica logs - from ${req.body.name}`,
@@ -35,7 +36,7 @@ export default function (req, res) {
     `,
   };
 
-  transporter.sendMail(mailData, (err, info) => {
+  transporter.sendMail(mailData, (err: any, info: any) => {
     if (err) {
       console.log(err);
       res.status(400).json({ message: err });
