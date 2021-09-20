@@ -17,7 +17,7 @@ function SomeSkills() {
         ))}
       </Container>
       <ButtonBox>
-        <Button onClick={() => router.push("/about/#myskills")}>
+        <Button onClick={() => router.replace("/about/#myskills")}>
           {t("some-skills:See all")}
         </Button>
       </ButtonBox>
