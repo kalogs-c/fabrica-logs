@@ -6,7 +6,7 @@ import MainHeader from "@components/Communs/Header";
 import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
 import Projects from "./MainPageProjects";
-import MySkills from "./MySkills";
+import SomeSkills from "./SomeSkills";
 import SendMail from "@components/Communs/SendMail";
 
 export default function MainPage() {
@@ -21,7 +21,7 @@ export default function MainPage() {
       </WelcomeWrapper>
       <MiniAboutMe />
       <Projects />
-      <MySkills />
+      <SomeSkills />
       <SendMail />
     </>
   );

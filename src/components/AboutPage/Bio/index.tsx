@@ -1,42 +1,38 @@
-import { Container, TextWrapper } from "./styles";
+import { useTranslation } from "react-i18next";
+import { scroller } from "react-scroll";
 
-import Typical from "react-typical";
+import MySkills from "../MySkills";
+import Hello from "./Hello";
+import { Container, TextMarkup } from "./styles";
 
 function Bio() {
+  const { t } = useTranslation();
   return (
-    <Container>
-      <TextWrapper>
-        <h1>
-          <span>
-            <Typical
-              className="typing-effect"
-              loop={Infinity}
-              wrapper="b"
-              steps={[
-                "Kalogs.tsx",
-                700,
-                "Developer.env",
-                700,
-                "Front-end-dev.js",
-                700,
-                "Carlos.html",
-                700,
-                "Happy.json",
-                700,
-                "Brazilian.css",
-                700,
-                "Curious.ts",
-                700,
-              ]}
-            />
-          </span>
-        </h1>
-        <span>
-          A developer that loves front-end
-        </span>
-        <span>and cares deeply about user experience and performance.</span>
-      </TextWrapper>
-    </Container>
+    <>
+      <Hello />
+      <Container>
+        <p>
+          {t("aboutme:My name is")} (a.k.a. <TextMarkup>Kalogs</TextMarkup>),{" "}
+          {t("aboutme:I'm based...")}{" "}
+          <TextMarkup
+            style={{ cursor: "pointer" }}
+            onClick={() =>
+              scroller.scrollTo("myskills", {
+                duration: 1000,
+                delay: 0.025,
+                smooth: "easeInOutQuart",
+              })
+            }
+          >
+            {t("aboutme:my knowledge")}
+          </TextMarkup>
+          .
+        </p>
+        <p>{t("aboutme:I'm focused")}</p>
+        <p>{t("aboutme:I also enjoy")}</p>
+        <p>{t("aboutme:When I'm not coding")}</p>
+      </Container>
+    </>
   );
 }
 
