@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import AboutPage from "@src/components/AboutPage";
+import AboutPage from "@components/AboutPage";
 
 export default function Projects() {
   return <AboutPage />;
