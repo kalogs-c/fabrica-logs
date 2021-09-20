@@ -16,7 +16,7 @@ import {
   SocialWrapper,
   LanguageSwitcher,
 } from "./styles";
-import MenuItem from "@src/components/Communs/Header/MenuCommuns/MenuItem";
+import MenuItem from "@components/Communs/Header/MenuCommuns/MenuItem";
 import Link from "next/link";
 
 // SVGs
@@ -24,7 +24,7 @@ import {
   GithubSVG,
   GmailSVG,
   LinkedInSVG,
-} from "@src/components/Communs/Header/MenuCommuns/svgs";
+} from "@components/Communs/Header/MenuCommuns/svgs";
 
 function MobileMenu() {
   const { t } = useTranslation();

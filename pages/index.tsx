@@ -1,6 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import MainPage from "@src/components/MainPage";
+import MainPage from "@components/MainPage";
 
 export default function Home() {
   return <MainPage />;
