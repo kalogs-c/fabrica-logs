@@ -62,7 +62,7 @@ function Form() {
     };
 
     // API request
-    callback = await fetch("api/contacst", {
+    callback = await fetch("api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
