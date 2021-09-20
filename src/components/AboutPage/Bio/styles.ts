@@ -22,8 +22,8 @@ export const Container = styled.article`
 `;
 
 export const TextMarkup = styled.span`
-  color: ${({ theme }) => theme.colors.primary}
-`
+  color: ${({ theme }) => theme.colors.primary};
+`;
 
 export const EmailButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -36,8 +36,9 @@ export const EmailButton = styled.button`
   font-size: 1.25rem;
   cursor: pointer;
   letter-spacing: 1.5px;
+  box-shadow: 0 0 7px ${({ theme }) => theme.colors.primary};
 
   &:hover {
     opacity: 0.8;
   }
-`
+`;
