@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { scroller } from "react-scroll";
 
-import MySkills from "../MySkills";
 import Hello from "./Hello";
-import { Container, TextMarkup } from "./styles";
+import { Container, TextMarkup, EmailButton } from "./styles";
 
 function Bio() {
   const { t } = useTranslation();
@@ -31,6 +30,17 @@ function Bio() {
         <p>{t("aboutme:I'm focused")}</p>
         <p>{t("aboutme:I also enjoy")}</p>
         <p>{t("aboutme:When I'm not coding")}</p>
+        <EmailButton
+          onClick={() =>
+            scroller.scrollTo("email", {
+              duration: 1000,
+              delay: 0.025,
+              smooth: "easeInOutQuart",
+            })
+          }
+        >
+          Let's talk!
+        </EmailButton>
       </Container>
     </>
   );

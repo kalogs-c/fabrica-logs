@@ -24,3 +24,20 @@ export const Container = styled.article`
 export const TextMarkup = styled.span`
   color: ${({ theme }) => theme.colors.primary}
 `
+
+export const EmailButton = styled.button`
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: #fff;
+  transition: all 0.2s ease-out;
+  max-width: 300px;
+  padding: 0.8rem;
+  border: none;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
