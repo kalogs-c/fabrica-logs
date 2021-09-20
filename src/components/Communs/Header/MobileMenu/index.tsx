@@ -99,13 +99,13 @@ function MobileMenu() {
             </SocialWrapper>
             <LanguageSwitcher>
               <li>
-                <Link href="/" locale="pt">
+                <Link href="#" locale="pt">
                   PT
                 </Link>
               </li>
               <li> | </li>
               <li>
-                <Link href="/" locale="en">
+                <Link href="#" locale="en">
                   EN
                 </Link>
               </li>
