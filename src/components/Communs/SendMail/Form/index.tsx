@@ -36,10 +36,10 @@ function Form() {
     direction: -1,
   });
 
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState<boolean>(false);
 
-  const [emailSended, setEmailSended] = useState("");
-  let callback = "";
+  const [emailSended, setEmailSended] = useState<string>("");
+  let callback: string = "";
 
   // Data camps Ref
   const nameRef = useRef(null);
@@ -47,15 +47,15 @@ function Form() {
   const contentRef = useRef(null);
 
   // Submit Form function
-  const handleSubmit = async (e) => {
+  const handleSubmit: Function = async (e) => {
     e.preventDefault();
     setLoading(true);
     // Form data
-    const name = nameRef.current.value;
-    const email = emailRef.current.value;
-    const content = contentRef.current.value;
+    const name: string = nameRef.current.value;
+    const email: string = emailRef.current.value;
+    const content: string = contentRef.current.value;
 
-    const data = {
+    const data: object = {
       name,
       email,
       content,

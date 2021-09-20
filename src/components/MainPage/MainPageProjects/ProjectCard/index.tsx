@@ -1,17 +1,16 @@
 // Components
 import { Container, TextWrapper, Title, Subtitle } from "./styles";
 import Image from "next/image";
-import OpenCard from "../ProjectCard";
 
 interface ProjectCard {
-  id: string;
+  key: string;
   title: string;
   subtitle: string;
 }
 
-function ProjectCard({ id, title, subtitle }: ProjectCard) {
+function ProjectCard({ key, title, subtitle }: ProjectCard) {
   return (
-    <Container>
+    <Container key={key}>
       <Image
         src="https://picsum.photos/300/200"
         alt="Ramdom image"

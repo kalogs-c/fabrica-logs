@@ -7,7 +7,7 @@ import { List, Wrapper, Title } from "./styles";
 import Link from "next/link";
 
 function LanguageSwitcher() {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
   const { t } = useTranslation();
   const variants = {
     open: { opacity: 1, height: "100%", display: "flex" },
