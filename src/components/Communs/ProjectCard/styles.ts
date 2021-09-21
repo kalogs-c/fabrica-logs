@@ -6,11 +6,20 @@ export const Container = styled.li`
   cursor: pointer;
   width: 100%;
   max-width: 340px;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.01, 1.01);
+  }
+
+  img {
+    border: 1px solid ${({ theme }) => theme.colors.greyFont} !important;
+    border-bottom: none !important;
+  }
 `;
 
 export const TextWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  border-top: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
