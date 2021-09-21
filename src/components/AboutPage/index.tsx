@@ -6,12 +6,14 @@ import SendMail from "@components/Communs/SendMail";
 import Description from "./Description";
 import Bio from "./Bio";
 import MySkills from "./MySkills";
+import { useTranslation } from "react-i18next";
 
 function AboutPage() {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>About - Fabrica Logs</title>
+        <title>{t("pagetitles:About")} - Fabrica Logs</title>
       </Head>
       <MainHeader />
       <Description />

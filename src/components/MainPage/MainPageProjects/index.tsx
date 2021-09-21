@@ -1,9 +1,13 @@
+import { useTranslation } from "next-i18next";
+import router from "next/router";
+
 import { Container } from "./styles";
 import { Title } from "@components/MainPage/Communs/Title";
-import ProjectCard from "./ProjectCard";
-import { useTranslation } from "next-i18next";
-
-const items = [{}];
+import {
+  SeeMoreButton,
+  SeeMoreButtonBox,
+} from "@components/MainPage/Communs/SeeMoreButton";
+import ProjectCard from "@components/Communs/ProjectCard";
 
 function Projects() {
   const { t } = useTranslation();
@@ -27,6 +31,11 @@ function Projects() {
           subtitle="Este é o meu terceiro projeto"
         />
       </Container>
+      <SeeMoreButtonBox>
+        <SeeMoreButton onClick={() => router.replace("/projects")}>
+          {t("some-skills:See all")}
+        </SeeMoreButton>
+      </SeeMoreButtonBox>
     </>
   );
 }
