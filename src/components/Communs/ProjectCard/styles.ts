@@ -10,10 +10,10 @@ export const Container = styled.li`
 
 export const TextWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.primary};
+  border-top: none;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-top: none;
   padding: 0.75rem 1rem;
 `;
 

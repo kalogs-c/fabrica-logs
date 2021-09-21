@@ -9,27 +9,22 @@ import {
 } from "@components/MainPage/Communs/SeeMoreButton";
 import ProjectCard from "@components/Communs/ProjectCard";
 
-function Projects() {
+function Projects({ data }) {
   const { t } = useTranslation();
+  const projectList = data.allProjects;
+
   return (
     <>
       <Title>{t("main-page-projects:Projects")}</Title>
       <Container>
-        <ProjectCard
-          keyId="1"
-          title="Primeiro projeto"
-          subtitle="Este é o meu primeiro projeto"
-        />
-        <ProjectCard
-          keyId="2"
-          title="Segundo projeto"
-          subtitle="Este é o meu segundo projeto"
-        />
-        <ProjectCard
-          keyId="3"
-          title="Terceiro projeto"
-          subtitle="Este é o meu terceiro projeto"
-        />
+        {projectList.map((project) => (
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            subtitle={project.description}
+            image={project.image.url}
+          />
+        ))}
       </Container>
       <SeeMoreButtonBox>
         <SeeMoreButton onClick={() => router.replace("/projects")}>
