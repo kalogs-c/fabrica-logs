@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "ansi-regex": "6.0.1",
     "framer-motion": "^4.1.17",
     "graphql": "^15.6.0",
     "graphql-request": "^3.5.0",
