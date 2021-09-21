@@ -9,7 +9,7 @@ import Projects from "./MainPageProjects";
 import SomeSkills from "./SomeSkills";
 import SendMail from "@components/Communs/SendMail";
 
-export default function MainPage() {
+export default function MainPage({ projectsData }: { projectsData: object[] }) {
   return (
     <>
       <Head>
@@ -20,7 +20,7 @@ export default function MainPage() {
         <WelcomePanel />
       </WelcomeWrapper>
       <MiniAboutMe />
-      <Projects />
+      <Projects data={projectsData} />
       <SomeSkills />
       <SendMail />
     </>

@@ -6,6 +6,16 @@ export const Container = styled.li`
   cursor: pointer;
   width: 100%;
   max-width: 340px;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    transform: scale(1.01, 1.01);
+  }
+
+  img {
+    border: 1px solid ${({ theme }) => theme.colors.greyFont} !important;
+    border-bottom: none !important;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -13,7 +23,6 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 5px;
-  border-top: none;
   padding: 0.75rem 1rem;
 `;
 

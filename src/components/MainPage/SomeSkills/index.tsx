@@ -1,5 +1,9 @@
-import { Container, ButtonBox, Button } from "./styles";
+import { Container } from "./styles";
 import { Title } from "@components/MainPage/Communs/Title";
+import {
+  SeeMoreButton,
+  SeeMoreButtonBox,
+} from "@components/MainPage/Communs/SeeMoreButton";
 import SkillCard from "./SkillCard";
 
 import { skillList } from "./skillList";
@@ -16,11 +20,11 @@ function SomeSkills() {
           <SkillCard key={name} imageUrl={imageUrl} name={name} />
         ))}
       </Container>
-      <ButtonBox>
-        <Button onClick={() => router.replace("/about/#myskills")}>
+      <SeeMoreButtonBox>
+        <SeeMoreButton onClick={() => router.replace("/about/#myskills")}>
           {t("some-skills:See all")}
-        </Button>
-      </ButtonBox>
+        </SeeMoreButton>
+      </SeeMoreButtonBox>
     </>
   );
 }

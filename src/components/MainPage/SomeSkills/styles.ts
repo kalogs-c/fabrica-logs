@@ -18,26 +18,3 @@ export const Container = styled.ul`
     grid-template-columns: repeat(4, 1fr);
   }
 `;
-
-export const ButtonBox = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Button = styled.button`
-  border: 1.25px solid ${({ theme }) => theme.colors.primary};
-  background-color: #fff;
-  padding: 0.8rem;
-  font-size: 1.05rem;
-  width: 200px;
-  margin: 10px 0;
-  transition: 0.2s ease-in-out all;
-  cursor: pointer;
-
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: #fff;
-  }
-`;
