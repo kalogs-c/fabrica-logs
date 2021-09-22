@@ -9,7 +9,9 @@ function MySkills() {
   const { t } = useTranslation();
   return (
     <>
-      <Title id="myskills" className="myskills" >{t("aboutme:My skills")}</Title>
+      <Title id="myskills" className="myskills">
+        {t("aboutme:My skills")}
+      </Title>
       <Container>
         {skillList.map(({ name, imageUrl }) => (
           <SkillCard key={name} imageUrl={imageUrl} name={name} />
