@@ -25,7 +25,7 @@ export default function MainHeader() {
         <Lottie options={defaultOptions} height={50} width={50} />
       </Wrapper>
       <NavBar />
-      <div style={{ position: "absolute", right: 0 }}>
+      <div style={{ position: "absolute", right: 0, zIndex: 100 }}>
         <MobileMenu />
       </div>
     </Header>

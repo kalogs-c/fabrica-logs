@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Button = styled.button`
   background-color: transparent;
   border: none;
-  z-index: 100;
 `;
 
 export const Wrapper = styled.div`
@@ -64,9 +63,8 @@ export const SocialWrapper = styled.div`
   }
 `;
 
-
 export const LanguageSwitcher = styled.ul`
   display: flex;
   gap: 5px;
   margin-top: 10px;
-`
+`;
