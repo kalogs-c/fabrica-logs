@@ -6,7 +6,7 @@ interface GraphQLRequest {
 }
 
 export function request({ query, variables }: GraphQLRequest) {
-  const endpoint = "https://graphql.datocms.com/";
+  const endpoint: string = "https://graphql.datocms.com/";
 
   const client = new GraphQLClient(endpoint, {
     headers: {

@@ -9,6 +9,11 @@ export default function Projects() {
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["header", "email-inputs", "aboutme", "pagetitles"])),
+    ...(await serverSideTranslations(locale, [
+      "header",
+      "email-inputs",
+      "aboutme",
+      "pagetitles",
+    ])),
   },
 });

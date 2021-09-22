@@ -1,22 +1,23 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetServerSideProps } from "next";
-import { request } from "../lib/datocms";
+import { request } from "../../lib/datocms";
 
-import MainPage from "@components/MainPage";
+import ProjectsPage from "@components/ProjectsPage";
 
-export default function Home({ data }: { data: object[] }) {
-  return <MainPage projectsData={data} />;
+export default function Projects({ data }: { data: object[] }) {
+  return <ProjectsPage projectsData={data} />;
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  const HOMEPAGE_QUERY: string = `{
-    allProjects (first: 3, locale: ${locale}) {
+  const HOMEPAGE_QUERY = `{
+    allProjects (locale: ${locale}) {
       id
       title
       description
       image {
         url
       }
+      technologies
     }
   }`;
 
@@ -29,11 +30,8 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale, [
         "header",
-        "welcomepage",
-        "miniaboutme",
-        "main-page-projects",
-        "some-skills",
         "email-inputs",
+        "pagetitles",
       ])),
       data,
     },
