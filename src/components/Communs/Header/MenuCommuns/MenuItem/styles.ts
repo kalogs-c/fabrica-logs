@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Item = styled.li`
-  color: #FFF;
+  color: ${({ theme }) => theme.colors.darkFont};
   transition: color 0.2s ease-out;
   cursor: pointer;
 
