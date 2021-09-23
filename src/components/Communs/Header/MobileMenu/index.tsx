@@ -1,5 +1,5 @@
 import { motion, useCycle } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { scroller } from "react-scroll";
 
 // Translation
@@ -43,7 +43,7 @@ function MobileMenu() {
   const sidebarVariants = {
     open: () => ({
       clipPath: `circle(50vh at 90vw 40px)`,
-      backgroundColor: "#fff",
+      backgroundColor: "#FBA754",
     }),
     closed: {
       clipPath: `circle(5% at 90vw 40px)`,
@@ -54,7 +54,7 @@ function MobileMenu() {
     },
   };
 
-  const [isOpen, cycleOpen] = useCycle<boolean>(false, true);
+  const [isOpen, setOpen] = useState<boolean>(false);
   const [animationState, setAnimationState] = useState({
     isStopped: false,
     isPaused: false,
@@ -62,17 +62,45 @@ function MobileMenu() {
     speed: 2,
   });
 
+  const menuRef = useRef(null);
+  const menuToggleRef = useRef(null);
+
+  useEffect(() => {
+    const handler = (e) => {
+      if (
+        !menuToggleRef.current.contains(e.target) &&
+        !menuRef.current.contains(e.target) &&
+        isOpen === true
+      ) {
+        setAnimationState({
+          ...animationState,
+          isStopped: false,
+          direction: animationState.direction === 1 ? -1 : 1,
+        });
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => document.removeEventListener("mousedown", handler);
+  });
+
   return (
     <Wrapper>
       <motion.div animate={isOpen ? "open" : "closed"}>
-        <motion.div className="menu-div" variants={sidebarVariants}>
+        <motion.div
+          ref={menuRef}
+          className="menu-div"
+          variants={sidebarVariants}
+        >
           <NavWrapper>
             <MenuItem goTo="/projects" content={t("header:Projects")} />
             <MenuItem goTo="/about" content={t("header:About me")} />
             <SocialWrapper>
               <a
                 onClick={() => {
-                  cycleOpen();
+                  setOpen(false);
                   scroller.scrollTo("email", {
                     duration: 2000,
                     delay: 0.025,
@@ -113,13 +141,14 @@ function MobileMenu() {
           </NavWrapper>
         </motion.div>
         <Button
+          ref={menuToggleRef}
           onClick={() => {
             setAnimationState({
               ...animationState,
               isStopped: false,
               direction: animationState.direction === 1 ? -1 : 1,
             });
-            cycleOpen();
+            setOpen(!isOpen);
           }}
         >
           <Lottie

@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 58vh;
   }
   @media (min-width: 1000px) {
     display: none;
