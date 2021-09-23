@@ -32,6 +32,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
         "header",
         "email-inputs",
         "pagetitles",
+        "project-page"
       ])),
       data,
     },

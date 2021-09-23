@@ -1,5 +1,6 @@
 import { skillList } from "./skillList";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import {
   ListContainer,
@@ -17,6 +18,8 @@ function ProjectCardRender({ data }) {
 
   const [clearFilter, setClearFilter] = useState(false);
   const [clearFilterTech, setClearFilterTech] = useState("");
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -47,7 +50,7 @@ function ProjectCardRender({ data }) {
               setClearFilter(false);
             }}
           >
-            Clear filter
+            {t("project-page:Clear")}
           </ClearFilterButton>
         </ClearFilterButtonWrapper>
       )}
