@@ -43,9 +43,10 @@ function MobileMenu() {
   const sidebarVariants = {
     open: () => ({
       clipPath: `circle(50vh at 90vw 40px)`,
-      backgroundColor: "#fff",
+      backgroundColor: "#FBA754",
     }),
     closed: {
+      backgroundColor: "#fff",
       clipPath: `circle(5% at 90vw 40px)`,
       transition: {
         stiffness: 20,
