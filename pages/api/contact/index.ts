@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-export default function (req: NextApiRequest, res: NextApiResponse) {
+export default function (req: NextApiRequest, res: NextApiResponse): void {
   if (req.method !== "POST") {
     res.status(400).json({
       message: "Method not allowed",

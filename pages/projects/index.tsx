@@ -21,7 +21,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     }
   }`;
 
-  const data = await request({
+  const data: object[] = await request({
     query: HOMEPAGE_QUERY,
     variables: { limit: 3 },
   });

@@ -79,8 +79,6 @@ function Form() {
       });
       return status === 200 ? "goodRequest" : "badRequest";
     });
-
-    console.log(callback);
   };
 
   return (
