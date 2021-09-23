@@ -6,6 +6,11 @@ export const FormCamp = styled.form`
   gap: 2rem;
 `;
 
+export const InputBox = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
 export const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: transparent;
@@ -13,6 +18,11 @@ export const Input = styled.input`
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+
+  &:focus ~ span {
+    transform: translate(-0.5rem, -2rem);
+    color: #fff;
+  }
 `;
 
 export const ContentInput = styled.textarea`
@@ -21,7 +31,24 @@ export const ContentInput = styled.textarea`
   color: #fff;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
+  width: 100%;
   height: 200px;
+  resize: none;
+
+  &:focus ~ span {
+    transform: translate(-0.5rem, -2rem);
+    color: #fff;
+  }
+`;
+
+export const InputAnimatedPlaceholder = styled.span`
+  color: ${({ theme }) => theme.colors.greyFont};
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  padding: 0.65rem;
+  transition: all 0.3s ease-out;
+  pointer-events: none;
 `;
 
 export const Wrapper = styled.div`
