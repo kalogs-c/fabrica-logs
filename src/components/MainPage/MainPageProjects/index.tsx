@@ -12,7 +12,6 @@ import ProjectCard from "@components/Communs/ProjectCard";
 function Projects({ data }) {
   const { t } = useTranslation();
   const projectList = data.allProjects;
-
   return (
     <>
       <Title>{t("main-page-projects:Projects")}</Title>
