@@ -8,8 +8,10 @@ import SendingMail from "@LottieFiles/SendingMail/sendingMail.json";
 // Components
 import {
   FormCamp,
+  InputBox,
   Input,
   ContentInput,
+  InputAnimatedPlaceholder,
   Wrapper,
   ButtonLabel,
   SubmitWrapper,
@@ -88,27 +90,32 @@ function Form() {
           <LoadingBallsAnimation />
         ) : (
           <FormCamp onSubmit={(e) => handleSubmit(e)}>
-            <Input
-              ref={nameRef}
-              required
-              type="text"
-              name="name"
-              placeholder={t("email-inputs:Name")}
-            />
-            <Input
-              ref={emailRef}
-              required
-              type="email"
-              name="email"
-              placeholder="Email"
-            />
-            <ContentInput
-              ref={contentRef}
-              required
-              type="text"
-              name="content"
-              placeholder={t("email-inputs:Content")}
-            />
+            <InputBox>
+              <Input ref={nameRef} required type="text" name="name" />
+              <InputAnimatedPlaceholder>
+                {t("email-inputs:Name")}
+              </InputAnimatedPlaceholder>
+            </InputBox>
+            <InputBox>
+              <Input
+                ref={emailRef}
+                required
+                type="email"
+                name="email"
+              />
+              <InputAnimatedPlaceholder>Email</InputAnimatedPlaceholder>
+            </InputBox>
+            <InputBox>
+              <ContentInput
+                ref={contentRef}
+                required
+                type="text"
+                name="content"
+              />
+              <InputAnimatedPlaceholder>
+                {t("email-inputs:Content")}
+              </InputAnimatedPlaceholder>
+            </InputBox>
             <button
               type="submit"
               id="submit-btn"
