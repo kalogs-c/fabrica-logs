@@ -25,10 +25,12 @@ export const ContentInput = styled.textarea`
 `;
 
 export const Wrapper = styled.div`
-  display: grid;
+  display: block;
   gap: 1erem;
+  max-width: 100%;
 
   @media (min-width: 800px) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -90,6 +92,7 @@ export const Modal = styled.div`
 
 export const Footer = styled.footer`
   background-color: #fff;
+  max-width: 400px;
   margin: 0 1rem;
   padding: 0.5rem;
   position: relative;
@@ -101,9 +104,11 @@ export const Footer = styled.footer`
   gap: 3px;
 
   a {
-    background-color: #eaeaea;
-    border-radius: 4px;
-    padding: 2px;
+    text-align: center;
+    display: block;
+    word-wrap: break-word;
+    justify-content: center;
+    flex-wrap: wrap;
     color: ${({ theme }) => theme.colors.primary};
   }
 `;
