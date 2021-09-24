@@ -51,21 +51,3 @@ export const EmailButton = styled.button`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 `;
-
-export const CvDownloadButton = styled.button`
-  background-color: #fff;
-  color: ${({ theme }) => theme.colors.darkFont};
-  border: 1px solid ${({ theme }) => theme.colors.primary};
-  transition: all 0.3s ease-out;
-  width: 300px;
-  padding: 0.8rem;
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  letter-spacing: 1.5px;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  }
-`;

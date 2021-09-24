@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { scroller } from "react-scroll";
 
 import Hello from "./Hello";
-import { Container, TextMarkup, EmailButton, CvDownloadButton, ButtonsContainer } from "./styles";
+import { Container, TextMarkup, EmailButton, ButtonsContainer } from "./styles";
 
 function Bio() {
   const { t } = useTranslation();
@@ -30,7 +30,6 @@ function Bio() {
         <p>{t("aboutme:I also enjoy")}</p>
         <p>{t("aboutme:When I'm not coding")}</p>
         <ButtonsContainer>
-          <CvDownloadButton>Download CV</CvDownloadButton>
           <EmailButton
             onClick={() =>
               scroller.scrollTo("email", {
