@@ -25,20 +25,47 @@ export const TextMarkup = styled.span`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
+export const ButtonsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 700px) {
+    gap: 1rem;
+  }
+`;
+
 export const EmailButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
   color: #fff;
   transition: all 0.2s ease-out;
-  max-width: 300px;
+  width: 300px;
   padding: 0.8rem;
   border: none;
   margin-top: 1.5rem;
   font-size: 1.25rem;
   cursor: pointer;
   letter-spacing: 1.5px;
-  box-shadow: 0 0 7px ${({ theme }) => theme.colors.primary};
 
   &:hover {
     opacity: 0.8;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+export const CvDownloadButton = styled.button`
+  background-color: #fff;
+  color: ${({ theme }) => theme.colors.darkFont};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  transition: all 0.3s ease-out;
+  width: 300px;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 `;

@@ -28,6 +28,7 @@ const theme = {
     primary: "#fba754",
     darkerPrimaryColor: "#C78442",
     greyFont: "#999",
+    pFont: "#7D7268",
     darkFont: "#111111",
   },
 };

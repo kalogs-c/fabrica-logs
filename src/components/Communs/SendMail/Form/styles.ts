@@ -19,7 +19,8 @@ export const Input = styled.input`
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
 
-  &:focus ~ span {
+  &:focus ~ span,
+  &:valid ~ span  {
     transform: translate(-0.5rem, -2rem);
     color: #fff;
   }
@@ -35,7 +36,8 @@ export const ContentInput = styled.textarea`
   height: 200px;
   resize: none;
 
-  &:focus ~ span {
+  &:focus ~ span,
+  &:valid ~ span {
     transform: translate(-0.5rem, -2rem);
     color: #fff;
   }
