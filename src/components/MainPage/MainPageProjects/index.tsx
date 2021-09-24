@@ -19,6 +19,7 @@ function Projects({ data }) {
       <Container>
         {projectList.map((project) => (
           <ProjectCard
+            goTo={project.id}
             key={project.id}
             title={project.title}
             subtitle={project.description}
