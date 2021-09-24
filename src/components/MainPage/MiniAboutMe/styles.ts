@@ -35,7 +35,7 @@ export const SectionTitle = styled.p`
 export const Paragraph = styled.p`
     font-size: 1.2rem;
     font-weight: 400;
-    color: #7D7268;
+    color: ${({ theme }) => theme.colors.pFont};
 
     a {
         cursor: pointer;

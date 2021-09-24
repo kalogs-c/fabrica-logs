@@ -20,6 +20,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     }, locale: ${locale}){
       id
       title
+      description
       fullDescription
       image {
         url
@@ -36,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["header", "email-inputs"])),
+      ...(await serverSideTranslations(locale, ["header", "email-inputs", "single-project"])),
       data,
     },
   };
