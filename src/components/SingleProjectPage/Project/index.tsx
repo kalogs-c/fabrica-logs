@@ -65,7 +65,7 @@ function Project({ data, readmeContent }) {
       </Container>
 
       <ReadmeWrapper>
-        <h1 style={{ textAlign: "center" }}> Github Readme</h1>
+        <h1 style={{ textAlign: "center", borderBottom: "1px solid #D0D7DE", marginBottom: "1rem"}}> Github Readme</h1>
         <ReactMarkdown
           children={readmeDecoded}
           remarkPlugins={[remarkGfm]}

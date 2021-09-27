@@ -104,6 +104,8 @@ export const TechItem = styled.li`
 export const ReadmeWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  border: 1px solid #D0D7DE;
+  border-radius: 15px;
   gap: 1rem;
   padding: 2rem;
   word-break: break-word;
@@ -113,6 +115,6 @@ export const ReadmeWrapper = styled.div`
   }
 
   @media (min-width: 500px) {
-    padding: 5rem;
+    margin:  3rem 5rem;
   }
 `;
