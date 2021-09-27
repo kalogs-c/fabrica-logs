@@ -3,7 +3,7 @@ import MainHeader from "@components/Communs/Header";
 import Project from "./Project";
 import SendMail from "@components/Communs/SendMail";
 
-function SingleProjectPage({ projectData }) {
+function SingleProjectPage({ projectData, readmeContent }) {
   const projectName = projectData.project.title;
   return (
     <>
@@ -11,7 +11,7 @@ function SingleProjectPage({ projectData }) {
         <title>{projectName}</title>
       </Head>
       <MainHeader />
-      <Project data={projectData} />
+      <Project data={projectData} readmeContent={readmeContent} />
       <SendMail />
     </>
   );

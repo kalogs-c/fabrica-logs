@@ -42,7 +42,7 @@ export const ImageWrapper = styled.div`
   height: 100%;
   max-height: 720px;
   max-width: 1280px;
-  aspect-ratio: 80 / 45;
+  aspect-ratio: 1920 / 1080;
 `;
 
 export const RightContainer = styled.div`
@@ -99,4 +99,20 @@ export const TechItem = styled.li`
   border-left: 3px solid ${({ theme }) => theme.colors.primary};
   padding: 0 1rem;
   color: ${({ theme }) => theme.colors.pFont};
+`;
+
+export const ReadmeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  word-break: break-word;
+
+  img {
+    width: 100%;
+  }
+
+  @media (min-width: 500px) {
+    padding: 5rem;
+  }
 `;
