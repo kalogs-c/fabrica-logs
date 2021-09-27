@@ -38,6 +38,7 @@ function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap"
           rel="stylesheet"
