@@ -3,9 +3,14 @@ import { GetServerSideProps } from "next";
 import { request } from "../../lib/datocms";
 
 import ProjectsPage from "@components/ProjectsPage";
+import { motion } from "framer-motion";
 
 export default function Projects({ data }: { data: object[] }) {
-  return <ProjectsPage projectsData={data} />;
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <ProjectsPage projectsData={data} />
+    </motion.div>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
@@ -32,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
         "header",
         "email-inputs",
         "pagetitles",
-        "project-page"
+        "project-page",
       ])),
       data,
     },

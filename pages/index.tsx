@@ -2,10 +2,16 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { GetServerSideProps } from "next";
 import { request } from "../lib/datocms";
 
+import { motion } from "framer-motion";
+
 import MainPage from "@components/MainPage";
 
 export default function Home({ data }: { data: object[] }) {
-  return <MainPage projectsData={data} />;
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <MainPage projectsData={data} />
+    </motion.div>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
