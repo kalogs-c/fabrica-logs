@@ -5,10 +5,16 @@ import { request } from "../../lib/datocms";
 import SingleProjectPage from "@components/SingleProjectPage";
 import { motion } from "framer-motion";
 
-export default function Projects({ data }: { data: object }) {
+export default function Projects({
+  data,
+  readme,
+}: {
+  data: object;
+  readme: string;
+}) {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <SingleProjectPage projectData={data} />
+      <SingleProjectPage projectData={data} readmeContent={readme} />
     </motion.div>
   );
 }
@@ -32,12 +38,20 @@ export const getServerSideProps: GetServerSideProps = async ({
       }
       technologies
       ghrepo
+      repoName
     }
   }`;
 
-  const data: object = await request({
+  const data: any = await request({
     query: HOMEPAGE_QUERY,
     variables: { limit: 3 },
+  });
+
+  const readme = await fetch(
+    `https://api.github.com/repos/carloshcamilo/${data.project.repoName}/readme`
+  ).then((res) => {
+    const response: any = res.json();
+    return response;
   });
 
   return {
@@ -48,6 +62,7 @@ export const getServerSideProps: GetServerSideProps = async ({
         "single-project",
       ])),
       data,
+      readme,
     },
   };
 };
