@@ -39,7 +39,7 @@ cd fabrica-logs
 npm install
 ```
 
-### or
+or
 
 ```
 cd fabrica-logs
