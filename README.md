@@ -3,11 +3,11 @@
 Fabrica Logs is an acronym with "Fabrica" that means "factory" in Portuguese with my nickname "Kalogs" it represents my portfolio, shows every single project that I made, technologies that I use, and what problem it solves.
 
 Summary:
-<ul>
-  <li><a href="#dependecies">Dependecies</a></li>
-  <li><a href="#how-its-going">See how it's going</a></li>
-  <li><a href="#languages">How many languages does it supports?</a></li>
-</ul>
+
+  Dependecie
+  See how it's going
+  How many languages does it supports?
+
 
 <hr>
 
@@ -29,15 +29,16 @@ F.logs it's hosted with Vercel on a temporary link, which you can access by <a h
 First, you have to have the necessary files, which you can get by <a href="https://github.com/carloshcamilo/fabrica-logs/archive/refs/heads/main.zip">clicking here</a> or cloning using Git running the code below:
 <br>
 <br>
-```
+`
   git clone https://github.com/carloshcamilo/fabrica-logs.git
-```
+`
 <br>
 <br>
-Or using the <a href="https://cli.github.com/">GitHub CLI</a> ->
-<code>
+Or using the <a href="https://cli.github.com/">GitHub CLI</a> -> 
+
+`
  gh repo clone carloshcamilo/fabrica-logs
-</code>
+`
 
 <hr>
 Step 2 - Go to the directory using the command <code>cd fabrica-logs</code> and install the dependencies typing <code>npm install</code> or <code>yarn</code> depending on which package manager are you using
