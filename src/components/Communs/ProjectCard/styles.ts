@@ -7,6 +7,7 @@ export const Container = styled.li`
   width: 100%;
   max-width: 340px;
   transition: all 0.2s ease-out;
+  background-color: #fff;
 
   &:hover {
     transform: scale(1.01, 1.01);
