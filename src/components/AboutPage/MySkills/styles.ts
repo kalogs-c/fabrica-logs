@@ -9,6 +9,10 @@ export const Container = styled.ul`
   gap: 1rem;
   padding: 1rem;
 
+  li + li {
+    margin-left: 1rem;
+  }
+
   @media (min-width: 600px) {
     margin: 1rem 4rem 5rem 4rem;
   }
