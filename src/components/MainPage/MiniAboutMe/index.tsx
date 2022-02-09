@@ -34,9 +34,9 @@ function MiniAboutMe() {
               }
             >
               {t("miniaboutme:my skills")}
-            </a>.
+            </a>
+            .
           </Paragraph>
-          <Paragraph>{t("miniaboutme:I am also")}</Paragraph>
         </Section>
         <Lottie options={defaultOptions} height={"90%"} width={"90%"} />
       </Container>

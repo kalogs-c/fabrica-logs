@@ -29,7 +29,7 @@ function WelcomePanel() {
               className="typing-effect"
               loop={Infinity}
               wrapper="b"
-              steps={["Carlos", 2500, "Kalogs", 2500]}
+              steps={["Carlos", 2500, "Kalogs", 2500, "Carlinhos", 2500]}
             />
           </span>
           <span>{t("welcomepage:And this is my factory")}</span>

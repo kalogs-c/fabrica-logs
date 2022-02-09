@@ -14,11 +14,11 @@ function Description() {
             loop={Infinity}
             wrapper="b"
             steps={[
-              "Kalogs.tsx",
+              "Kalogs.ts",
               700,
               "Developer.env",
               700,
-              "Front-end-dev.js",
+              "Back-end-dev.js",
               700,
               "Carlos.html",
               700,
@@ -26,7 +26,9 @@ function Description() {
               700,
               "Brazilian.css",
               700,
-              "Curious.ts",
+              "Curious.go",
+              700,
+              "Handsome.tsx",
               700,
             ]}
           />
