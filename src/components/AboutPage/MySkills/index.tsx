@@ -24,7 +24,13 @@ function MySkills() {
         ))}
       </Container>
       <Container>
-        <TitleBlock>{t("aboutme:Libraries/frameworks and tools")}</TitleBlock>
+        <TitleBlock>{t("aboutme:Libraries and frameworks")}</TitleBlock>
+        {libsAndFrameworksList.map(({ name, imageUrl }) => (
+          <SkillCard key={name} imageUrl={imageUrl} name={name} />
+        ))}
+      </Container>
+      <Container>
+        <TitleBlock>{t("aboutme:Tools")}</TitleBlock>
         {toolsList.map(({ name, imageUrl }) => (
           <SkillCard key={name} imageUrl={imageUrl} name={name} />
         ))}
