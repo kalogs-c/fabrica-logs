@@ -25,11 +25,9 @@ First, you have to have the necessary files, which you can get by [clicking here
 <br>
 <br>
 
-<pre>
-	<code>
-    `git clone https://github.com/carloshcamilo/fabrica-logs.git`
-	</code>
-</pre>
+`
+    git clone https://github.com/carloshcamilo/fabrica-logs.git
+`
 <br>
 <br>
 Or using the [GitHub CLI](https://cli.github.com/) ->
