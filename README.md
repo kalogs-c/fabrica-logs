@@ -21,15 +21,12 @@ F.logs it's hosted with Vercel on a temporary link, which you can access by <a h
 
 ### Running on your localhost
 
-First, you have to have the necessary files, which you can get by [clicking here](https://github.com/carloshcamilo/fabrica-logs/archive/refs/heads/main.zip) or cloning using Git running the code below:
-<br>
-<br>
+First, you have to have the necessary files, which you can get by [clicking here](https://github.com/carloshcamilo/fabrica-logs/archive/refs/heads/main.zip) or cloning using Git running the code below:  
 
 `
     git clone https://github.com/carloshcamilo/fabrica-logs.git
-`
-<br>
-<br>
+`  
+
 Or using the [GitHub CLI](https://cli.github.com/) ->
 
 ` gh repo clone carloshcamilo/fabrica-logs`
