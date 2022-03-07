@@ -24,9 +24,7 @@ F.logs it's hosted with Vercel on a temporary link, which you can access by <a h
 First, you have to have the necessary files, which you can get by [clicking here](https://github.com/carloshcamilo/fabrica-logs/archive/refs/heads/main.zip) or cloning using Git running the code below:
 <br>
 <br>
-<pre>
 `git clone https://github.com/carloshcamilo/fabrica-logs.git`
-</pre>
 <br>
 <br>
 Or using the [GitHub CLI](https://cli.github.com/) ->
