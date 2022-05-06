@@ -17,7 +17,7 @@ This application it's using NextJS with TypeScript and some libraries, which is:
 
 ### Access the website
 
-F.logs it's hosted with Vercel on a temporary link, which you can access by <a href="https://fabrica-logs-sepia.vercel.app" target="_blank">clicking here</a>
+F.logs it's hosted with Vercel which you can access by <a href="https://www.fabricalogs.fun/" target="_blank">clicking here</a>
 
 ### Running on your localhost
 
