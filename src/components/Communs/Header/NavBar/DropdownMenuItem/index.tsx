@@ -56,7 +56,7 @@ function DropdownMenuItem({ title }: DropdownMenuItemProps) {
                 <span>Gmail</span>
               </Item>
               <Item
-                href="https://github.com/carloshcamilo"
+                href="https://github.com/kalogs-c"
                 target="_blank"
                 rel="noreferrer"
               >
