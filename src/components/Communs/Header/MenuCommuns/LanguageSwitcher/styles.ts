@@ -61,7 +61,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.span`
-  color: ${({ theme }) => theme.colors.darkFont};
+  color: #fff;
   transition: color 0.2s ease-out;
   cursor: pointer;
 

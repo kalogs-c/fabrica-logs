@@ -17,7 +17,7 @@ export const Container = styled.article`
   }
 
   p {
-    color: ${({ theme }) => theme.colors.darkFont};
+    color: ${({ theme }) => theme.colors.pFont};
   }
 `;
 

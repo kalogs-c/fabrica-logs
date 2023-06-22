@@ -15,7 +15,7 @@ export const Container = styled.div`
   h1 {
     display: flex;
     gap: 1rem;
-    color: ${({ theme }) => theme.colors.darkFont};
+    color: #fff;
   }
 `;
 

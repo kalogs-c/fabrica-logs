@@ -5,10 +5,9 @@ import { WelcomeWrapper } from "./style";
 import MainHeader from "@components/Communs/Header";
 import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
-import Projects from "./MainPageProjects";
 import SendMail from "@components/Communs/SendMail";
 
-export default function MainPage({ projectsData }: { projectsData: object[] }) {
+export default function MainPage() {
   return (
     <>
       <Head>
@@ -19,7 +18,6 @@ export default function MainPage({ projectsData }: { projectsData: object[] }) {
         <WelcomePanel />
       </WelcomeWrapper>
       <MiniAboutMe />
-      <Projects data={projectsData} />
       <SendMail />
     </>
   );

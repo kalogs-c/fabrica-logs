@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.span`
-  color: ${({ theme }) => theme.colors.darkFont};
+  color: #fff;
   cursor: pointer;
   transition: all 0.2s ease-out;
   z-index: 20;

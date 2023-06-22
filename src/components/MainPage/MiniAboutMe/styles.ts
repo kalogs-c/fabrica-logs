@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
     display: grid;
@@ -23,14 +23,14 @@ export const Section = styled.section`
     flex-direction: column;    
     gap: 30px;
     margin-bottom: 3rem;
-`
+`;
 
 export const SectionTitle = styled.p`
     font-size: 1.6rem;
     margin-bottom: 14px;
-    color: #333;
+    color: #fff;
     font-weight: lighter;    
-`
+`;
 
 export const Paragraph = styled.p`
     font-size: 1.2rem;
@@ -41,4 +41,4 @@ export const Paragraph = styled.p`
         cursor: pointer;
         color: ${({ theme }) => theme.colors.primary};
     }
-`
+`;

@@ -11,7 +11,10 @@ function NavBar() {
     <Container>
       <List>
         <MenuItem goTo="https://kablogs.fun/" content={"Blog"} />
-        <MenuItem goTo="/projects" content={t("header:Projects")} />
+        <MenuItem
+          goTo="https://github.com/kalogs-c?tab=repositories"
+          content={t("header:Projects")}
+        />
         <MenuItem goTo="/about" content={t("header:About me")} />
         <DropdownMenuItem title={t("header:Connect")} />
         <LanguageSwitcher />

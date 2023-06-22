@@ -14,7 +14,7 @@ export const LottieBackground = styled.div`
   right: 0;
 
   @media (min-width: 800px) {
-    right: 10rem;
+    bottom: 0;
   }
 `;
 
@@ -40,6 +40,7 @@ export const TextWrapper = styled.div`
 
   span {
     font-weight: lighter;
+    color: #fff;
 
     @media (min-width: 600px) {
       font-size: 1.4rem;
@@ -53,6 +54,7 @@ export const TextWrapper = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
+      color: #fff;
 
     span {
       font-size: 1.4rem;

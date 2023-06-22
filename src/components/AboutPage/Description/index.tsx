@@ -1,4 +1,4 @@
-import { Container, TextWrapper, Span } from "./styles";
+import { Container, Span, TextWrapper } from "./styles";
 
 import Typical from "react-typical";
 import { useTranslation } from "react-i18next";
@@ -16,19 +16,15 @@ function Description() {
             steps={[
               "Kalogs.ts",
               700,
-              "Developer.env",
+              "Developer.yaml",
               700,
-              "Back-end-dev.js",
+              "Carlos.js",
               700,
-              "Carlos.html",
-              700,
-              "Happy.json",
-              700,
-              "Brazilian.css",
+              "Brazilian.c",
               700,
               "Curious.go",
               700,
-              "Handsome.tsx",
+              "Handsome.css",
               700,
             ]}
           />

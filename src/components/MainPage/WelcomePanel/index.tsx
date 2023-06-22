@@ -2,7 +2,7 @@ import Lottie from "react-lottie";
 import rotatingGears from "../../../LottieFiles/WelcomePageGear/gear.json";
 
 import { Container, LottieBackground, TextWrapper } from "./styles";
-import ScrollSign from "./ScrollSign"
+import ScrollSign from "./ScrollSign";
 
 import Typical from "react-typical";
 import { useTranslation } from "next-i18next";
@@ -37,7 +37,7 @@ function WelcomePanel() {
       </TextWrapper>
       <ScrollSign />
       <LottieBackground>
-        <Lottie options={defaultOptions} height={500} width={500} />
+        <Lottie options={defaultOptions} height={750} width={750} />
       </LottieBackground>
     </Container>
   );

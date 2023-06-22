@@ -9,6 +9,7 @@ export const Container = styled.div`
   padding: 0 2rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
+  color: #fff;
 
   @media (min-width: 600px) {
     padding: 0 4rem;

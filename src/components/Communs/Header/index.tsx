@@ -3,7 +3,7 @@ import rotatingGear from "@LottieFiles/RotatingGear/gear.json";
 import router from "next/router";
 
 // components
-import { Header, Wrapper, Title } from "./styles";
+import { Header, Title, Wrapper } from "./styles";
 import NavBar from "./NavBar";
 import MobileMenu from "./MobileMenu";
 

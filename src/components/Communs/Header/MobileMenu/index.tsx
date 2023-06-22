@@ -1,5 +1,5 @@
 import { motion, useCycle } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { scroller } from "react-scroll";
 
 // Translation
@@ -11,10 +11,10 @@ import Menu from "@LottieFiles/Menu/menu.json";
 // components
 import {
   Button,
-  Wrapper,
+  LanguageSwitcher,
   NavWrapper,
   SocialWrapper,
-  LanguageSwitcher,
+  Wrapper,
 } from "./styles";
 import MenuItem from "@components/Communs/Header/MenuCommuns/MenuItem";
 import Link from "next/link";
@@ -95,7 +95,11 @@ function MobileMenu() {
           variants={sidebarVariants}
         >
           <NavWrapper>
-            <MenuItem goTo="/projects" content={t("header:Projects")} />
+            <MenuItem goTo="https://kablogs.fun/" content={"Blog"} />
+            <MenuItem
+              goTo="https://github.com/kalogs-c?tab=repositories"
+              content={t("header:Projects")}
+            />
             <MenuItem goTo="/about" content={t("header:About me")} />
             <SocialWrapper>
               <a
@@ -111,7 +115,7 @@ function MobileMenu() {
                 <GmailSVG />
               </a>
               <a
-                href="https://github.com/carloshcamilo"
+                href="https://github.com/kalogs-c"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -131,7 +135,7 @@ function MobileMenu() {
                   PT
                 </Link>
               </li>
-              <li> | </li>
+              <li>|</li>
               <li>
                 <Link href="#" locale="en">
                   EN

@@ -30,7 +30,6 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 100;
 
-
   &::after {
     content: "Fl";
 
