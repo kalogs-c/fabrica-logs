@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 import { scroller } from "react-scroll";
-import { Container, Section, SectionTitle, Paragraph } from "./styles";
+import { Container, Paragraph, Section, SectionTitle } from "./styles";
 import { Title } from "@components/MainPage/Communs/Title";
 
 import Lottie from "react-lottie";
@@ -23,19 +23,7 @@ function MiniAboutMe() {
         <Section>
           <SectionTitle>{t("miniaboutme:I've been")}</SectionTitle>
           <Paragraph>
-            {t("miniaboutme:I'm always excited")}{" "}
-            <a
-              onClick={() =>
-                scroller.scrollTo("myskills", {
-                  duration: 1000,
-                  delay: 0.025,
-                  smooth: "easeInOutQuart",
-                })
-              }
-            >
-              {t("miniaboutme:my skills")}
-            </a>
-            .
+            {t("miniaboutme:I'm always excited")} {t("miniaboutme:my skills")}.
           </Paragraph>
         </Section>
         <Lottie options={defaultOptions} height={"90%"} width={"90%"} />

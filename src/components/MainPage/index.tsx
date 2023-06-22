@@ -6,7 +6,6 @@ import MainHeader from "@components/Communs/Header";
 import WelcomePanel from "./WelcomePanel";
 import MiniAboutMe from "./MiniAboutMe";
 import Projects from "./MainPageProjects";
-import SomeSkills from "./SomeSkills";
 import SendMail from "@components/Communs/SendMail";
 
 export default function MainPage({ projectsData }: { projectsData: object[] }) {
@@ -21,7 +20,6 @@ export default function MainPage({ projectsData }: { projectsData: object[] }) {
       </WelcomeWrapper>
       <MiniAboutMe />
       <Projects data={projectsData} />
-      <SomeSkills />
       <SendMail />
     </>
   );

@@ -10,6 +10,7 @@ function NavBar() {
   return (
     <Container>
       <List>
+        <MenuItem goTo="https://kablogs.fun/" content={"Blog"} />
         <MenuItem goTo="/projects" content={t("header:Projects")} />
         <MenuItem goTo="/about" content={t("header:About me")} />
         <DropdownMenuItem title={t("header:Connect")} />
